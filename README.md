@@ -1,47 +1,40 @@
-# Astro Starter Kit: Minimal
+# Getting Started
 
+The following works on both MacOS and Linux. If you are on Windows, set up wsl and then follow along
+
+## 1. Ensure that you have the nodejs installed (at least version 18)
+
+#### 1. Install Node version manager
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 ```
-npm create astro@latest -- --template minimal
-```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+or 
+```zsh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | zsh
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+#### 2. Install NodeJS
+```bash
+nvm install --lts
+nvm use --lts
+```
+#### 3. Enable pnpm
+```bash
+corepack enable
+```
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 2. Clone this Repository and install the dependencies
+```bash
+git clone https://github.com/ELIXIR-NO/elixir-no-webpages.git
+cd elixir-no-webpages
+pnpm i
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 3. Launch the local dev environment
+```bash
+pnpm dev
+```
+You should now be able to open your browser and navigate the the URL of the dev server.
+From this point, any change you make to your files will be immediately reflected in your browser.
+In rare ocations, adding files to the project (images, static content etc) might not be seen by the dev server.
+If you suspect such an event, simply kill the server with ```ctrl + c``` and restart it.
