@@ -49,5 +49,6 @@ jobs:
       - name: Prettify code
         uses: creyD/prettier_action@v4.3
         with:
+          prettier_plugins: "prettier-plugin-tailwindcss prettier-plugin-astro"
           prettier_options: '--config ./.prettierrc.json --write src/**/*.{astro,ts,tsx,md,mdx}'
           same_commit: True
