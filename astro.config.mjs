@@ -6,5 +6,5 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
 	integrations: [tailwind()],
 	site: 'https://ELIXIR-NO.github.io',
-	base: '/elixir-no',
+	base: '/elixir-no-webpages',
 });
