@@ -1,33 +1,77 @@
 ---
 import '@styles/global.css';
 import '../globalVariables.ts'
+import {contactAddress, fkURL, nmbuURL, ntnuURL, uibURL, uioURL, uitURL} from "../globalVariables";
 ---
 
-<footer class="bg-clip-padding p-4 bg-indigo-500">
-    <div class="flex flex-row space-x-4 place-content-center me-100">
-        <a title="UiB" href="https://uib.no" target="_blank" rel="noopener">
-            <img src="img/logos/UiB_eng_white_center.png" alt="UiBlogo_Eng_white_center" width="122" height="42" />
-        </a>
-        <a title="NTNU" href="https://ntnu.no" target="_blank" rel="noopener">
-            <img src="img/logos/NTNU_eng_white_center.png" alt="NTNUlogo_Eng_white_center" width="187" height="36" />
-        </a>
-        <a title="UiT" href="https://uit.no" target="_blank" rel="noopener">
-            <img src="img/logos/UiT_no_white_center.png" alt="UiTlogo_no_white_center" width="47" height="47" />
-        </a>
-        <a title="NMBU" href="https://www.nmbu.no/" target="_blank" rel="noopener">
-            <img src="img/logos/NMBU_eng_lightgreen_center.png" alt="NMBU_eng_lightgreen_center" width="134" height="46" />
-        </a>
-        <a title="UiO" href="https://uio.no" target="_blank" rel="noopener">
-            <img src="img/logos/UiO_eng_red_center.png" alt="UiO_Eng_red_center" width="47" height="47" />
-        </a>
-        <a href="https://www.forskningsradet.no" target="_blank" rel="noopener">
-            <img src="img/logos/FR_eng_white_center.png" alt="FR_Eng_white_center" width="201" height="37" />
-        </a>
-    </div>
-    <address>
-        <a href="mailto:webmaster@example.com">Contact Us</a>
-    </address>
-    <div class="text-center">
-        <p>Financed by the Research Council of Norway’s grants 208481, 270068, 295932, the University of Bergen, the University of Oslo, the Arctic University of Norway in Tromsø, the Norwegian University of Science and Technology and the Norwegian University of Life Sciences: NMBU</p>
-    </div>
+<footer>
+    <section class="bg-clip-padding p-4 bg-zinc-400 flex flex-row">
+        <div class="flex flex-row basis-3/4">
+            <div class="basis-1/3">
+                <nav>
+                    <h2 class="border-b-2">National nodes</h2>
+                    <ul>
+                        <li><a href="/organization/elixir-uib">University of Bergen (Coordinator)</a></li>
+                        <li><a href="/organization/elixir-uio">University of Oslo</a></li>
+                        <li><a href="/organization/elixir-uit">The Arctic University of Norway in Tromsø</a></li>
+                        <li><a href="/organization/elixir-ntnu">NTNU Trondheim</a></li>
+                        <li><a href="/organization/elixir-NMBU">NMBU Ås</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="basis-1/3">
+                <nav>
+                    <h2 class="border-b-2">International deliverables</h2>
+                    <ul>
+                        <li><a href="https://hyperbrowser.uio.no/hb">Genomic HyperBrowser</a></li>
+                        <li><a href="http://bioxsd.org">BioXSD/GTrack ecosystem</a></li>
+                        <li><a href="https://licebase.org/">LiceBase</a></li>
+                        <li><a href="https://mmp.sfb.uit.no/">METApipe</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="basis-1/3">
+                <nav>
+                    <h2 class="border-b-2">Upcoming events</h2>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="basis-1/4 flex flex-col">
+            <a title="home" href={uibURL} target="_blank" rel="noopener">
+                <img src="img/logos/elixirNorway_eng_white_center.png" alt="elixirNorway_eng_white_center" width="150" />
+            </a>
+            <ul class="flex flex-row">
+                <li></li>
+            </ul>
+        </div>
+    </section>
+    <section class="bg-clip-padding p-4 bg-sky-900 text-white">
+        <div class="flex flex-row space-x-4 place-content-center me-100">
+            <a title="UiB" href={uibURL} target="_blank" rel="noopener">
+                <img src="img/logos/UiB_eng_white_center.png" alt="UiBlogo_Eng_white_center" width="122" height="42" />
+            </a>
+            <a title="NTNU" href={ntnuURL} target="_blank" rel="noopener">
+                <img src="img/logos/NTNU_eng_white_center.png" alt="NTNUlogo_Eng_white_center" width="187" height="36" />
+            </a>
+            <a title="UiT" href={uitURL} target="_blank" rel="noopener">
+                <img src="img/logos/UiT_no_white_center.png" alt="UiTlogo_no_white_center" width="47" height="47" />
+            </a>
+            <a title="NMBU" href={nmbuURL} target="_blank" rel="noopener">
+                <img src="img/logos/NMBU_eng_lightgreen_center.png" alt="NMBU_eng_lightgreen_center" width="134" height="46" />
+            </a>
+            <a title="UiO" href={uioURL} target="_blank" rel="noopener">
+                <img src="img/logos/UiO_eng_red_center.png" alt="UiO_Eng_red_center" width="47" height="47" />
+            </a>
+            <a href={fkURL} target="_blank" rel="noopener">
+                <img src="img/logos/FR_eng_white_center.png" alt="FR_Eng_white_center" width="201" height="37" />
+            </a>
+        </div>
+        <address class="text-center bg-clip-padding p-4 text-2xl">
+            <a href={contactAddress}>Contact us</a>
+        </address>
+        <p class="text-center text-xs">Financed by the Research Council of Norway’s grants 208481, 270068, 295932, the University of Bergen, the University of Oslo, the Arctic University of Norway in Tromsø, the Norwegian University of Science and Technology and the Norwegian University of Life Sciences: NMBU</p>
+    </section>
 </footer>

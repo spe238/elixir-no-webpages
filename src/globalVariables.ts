@@ -1,1 +1,7 @@
-export const contactAddress = 'david.dolan@uib.no'
+export const contactAddress = 'mailto:david.dolan@uib.no'
+export const fkURL = 'https://www.forskningsradet.no'
+export const uioURL = 'https://uio.no'
+export const nmbuURL = 'https://www.nmbu.no'
+export const uitURL = 'https://uit.no'
+export const ntnuURL = 'https://ntnu.no'
+export const uibURL = 'https://uib.no'
