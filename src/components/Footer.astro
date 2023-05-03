@@ -2,8 +2,10 @@
 import '@styles/global.css';
 import '../globalVariables.ts'
 import {contactAddress, fkURL, nmbuURL, ntnuURL, uibURL, uioURL, uitURL} from "../globalVariables";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTwitterSquare, faLinkedinIn, faYoutubeSquare, faFlickr } from '@fortawesome/free-brands-svg-icons'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 ---
-
 <footer>
     <section class="bg-clip-padding p-4 bg-zinc-400 flex flex-row">
         <div class="flex flex-row basis-3/4">
@@ -39,13 +41,26 @@ import {contactAddress, fkURL, nmbuURL, ntnuURL, uibURL, uioURL, uitURL} from ".
                 </nav>
             </div>
         </div>
-        <div class="basis-1/4 flex flex-col">
+        <div class="basis-1/4 flex flex-col gap-x-10 space-y-4 px-20">
             <a title="home" href={uibURL} target="_blank" rel="noopener">
                 <img src="img/logos/elixirNorway_eng_white_center.png" alt="elixirNorway_eng_white_center" width="150" />
             </a>
-            <ul class="flex flex-row">
-                <li></li>
-            </ul>
+            <div class="flex flex-row space-x-4">
+
+                <a href="https://twitter.com/elixireurope" title="Twitter">
+                    <FontAwesomeIcon icon={faTwitterSquare} size="2xl"/>
+                </a>
+                <a href="https://www.linkedin.com/company/elixir-europe" title="LinkdIn">
+                    <FontAwesomeIcon icon={faLinkedinIn}  size="2xl"/>
+                </a>
+                <a href="https://www.youtube.com/channel/UCvwFIw5HomylguGOGxR8B8w" title="Youtube">
+                    <FontAwesomeIcon icon={faYoutubeSquare}  size="2xl" />
+                </a>
+                <a href="https://www.flickr.com/photos/elixir-europe/" title="flickr">
+                    <FontAwesomeIcon icon={faFlickr}  size="2xl"/>
+                </a>
+
+            </div>
         </div>
     </section>
     <section class="bg-clip-padding p-4 bg-sky-900 text-white">
