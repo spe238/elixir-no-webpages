@@ -1,61 +1,31 @@
 ---
-import '@styles/global.css';
 ---
 
-<div class="main-layout-container">
-    <div class="main-layout-header"></div>
-    <div class="main-layout-navbar"></div>
-    <div class="main-layout-content">
-        <slot />
-    </div>
-    <div class="main-layout-footer"></div>
+<div class="fit-height grid grid-rows-[minmax(500px,1fr)_2fr_200px]">
+	<div
+		class="grid grid-cols-[1fr_10fr_1fr] bg-gray-900/30 z-10 fixed overflow-hidden top-0 h-[100px] w-full">
+		<div></div>
+		<div>
+			<!-- todo: Menu component comes here -->
+			<div class="flex gap-5 text-white">
+				<div>Item 1</div>
+				<div>Item 2</div>
+				<div>Item 3</div>
+				<div>Item 4</div>
+				<div>Item 5</div>
+			</div>
+		</div>
+		<div></div>
+	</div>
+	<div class="grid grid-cols-3 bg-gray-600">
+		<!-- todo: Carousel component comes here -->
+	</div>
+	<div class="grid grid-cols-[1fr_10fr_1fr]">
+		<div></div>
+		<slot />
+		<div></div>
+	</div>
+	<div class="bg-gray-800">
+		<!-- todo: Footer component comes here -->
+	</div>
 </div>
-
-<style>
-    .main-layout-container {
-        display: grid;
-        grid-template-areas: 
-            "header header"
-            "navbar content"
-            "footer footer";
-        grid-template-columns: 300px 10fr;
-        grid-template-rows: 100px 1fr 200px;
-        height: 100%;
-        width: 100%;
-
-        /* For Mobile View */
-        @media screen and (max-width: 640px){
-            grid-template-areas: 
-                "header"
-                "navbar"
-                "content"
-                "footer";
-            grid-template-columns: 1fr;
-            grid-template-rows: 100px 1fr 1fr 200px;
-        }
-    }
-
-    .main-layout-header {
-        display: grid;
-        grid-area: header;
-        background-color: #bdbdbd;
-    }
-
-    .main-layout-navbar {
-        display: grid;
-        grid-area: navbar;
-        background-color: #9c9c9c;
-    }
-
-    .main-layout-content {
-        display: grid;
-        grid-area: content;
-        background-color: #ffffff;
-    }
-
-    .main-layout-footer {
-        display: grid;
-        grid-area: footer;
-        background-color: #424242;
-    }
-</style>

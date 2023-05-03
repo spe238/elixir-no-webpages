@@ -58,3 +58,11 @@ h6 {
 html {
 	@apply bg-slate-200;
 }
+
+.fit-height {
+	height: 100%;
+}
+
+.fit-width {
+	width: 100%;
+}
