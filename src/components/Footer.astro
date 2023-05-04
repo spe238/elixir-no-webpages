@@ -17,12 +17,12 @@ import { faTwitterSquare, faLinkedinIn, faYoutubeSquare, faFlickr } from '@forta
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import SocialIcon from "./SocialIcon.astro";
 ---
-<footer class="max-w-1300 text-white border-white text-sm leading-3">
+<footer class="max-w-1300 text-white border-white text-base leading-6">
     <section class="bg-elixir-grey md:flex md:gap-5 md:justify-between py-5 px-5">
         <div class="shrink-0 md:basis-2/6">
             <nav >
-                <h2 class="border-b">National nodes</h2>
-                <ul>
+                <h2 class="border-b font-semibold">National nodes</h2>
+                <ul class="pt-1">
                     {dictNodes.map(node => (
                       <li><a class="hover:underline" href={node.link}> {node.name}</a></li>
                       )
@@ -31,10 +31,10 @@ import SocialIcon from "./SocialIcon.astro";
             </nav>
         </div>
         <div class="shrink-0 min-w-fit md:basis-1/4">
-            <h2 class="border-b">International deliverables</h2>
-            <ul>
+            <h2 class="border-b font-semibold">International deliverables</h2>
+            <ul class="pt-1">
                 {dictDelivrables.map(node => (
-                      <li><a class="hover:underline" href={node.link}> {node.name}</a></li>
+                      <li><a class="hover:underline" href={node.link} target="_blank" rel="noopener"> {node.name}</a></li>
                       )
                     )}
             </ul>
