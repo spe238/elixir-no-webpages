@@ -42,3 +42,31 @@ export const listServicesEIn = [
 	'TSD@UiO',
 	'Other sensitive data platforms',
 ]
+
+export const listServicesTools = [
+	'Marine metagenomics',
+	'Salmobase',
+	'Licebase',
+	'Hyperbrowser',
+	'BioXSD/GTrack',
+	'FAIRtracks',
+	'CarveME',
+	'CHOPCHOP',
+	'immuneML',
+	'NFEGA',
+	'Covid-19 Data Portal Norway',
+	'SARS-CoV2 DB',
+	'JASPAR',
+	'MirGeneDB',
+	'UniBind',
+	'Webnma',
+]
+export const listServicesData = [
+	'BioMedData',
+	'Data Stewardship Wizard',
+	'RDMKit',
+	'Data sharing',
+	'Data storage',
+	'EDAM',
+	'Interoperability',
+]
