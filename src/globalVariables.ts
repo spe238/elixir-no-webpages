@@ -35,3 +35,10 @@ export const dictDelivrables = [
 	{ name: 'LiceBase', link: 'https://licebase.org' },
 	{ name: 'METApipe', link: 'https://mmp.sfb.uit.no' },
 ];
+
+export const listServicesEIn = [
+	'NeLS',
+	'Galaxy',
+	'TSD@UiO',
+	'Other sensitive data platforms',
+]
