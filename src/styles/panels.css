@@ -70,6 +70,7 @@
 
 
 ul {
+  margin-top: 15px;
   list-style-type: circle;
   list-style-position: inside;
 }
