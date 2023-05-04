@@ -1,89 +1,90 @@
 ---
 import '@styles/global.css';
 import '../globalVariables.ts'
-import {contactAddress, fkURL, nmbuURL, ntnuURL, uibURL, uioURL, uitURL} from "../globalVariables";
+import {
+    contactAddress,
+    fkURL, frLogoWhite, nmbuLogoWhite,
+    nmbuURL,
+    ntnuLogoWhite,
+    ntnuURL,
+    uibLogoWhite,
+    uibURL, uioLogoWhite,
+    uioURL,
+    uitURL
+} from "../globalVariables";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitterSquare, faLinkedinIn, faYoutubeSquare, faFlickr } from '@fortawesome/free-brands-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import SocialIcon from "./SocialIcon.astro";
 ---
-<footer>
-    <section class="bg-clip-padding p-4 bg-zinc-400 flex flex-row">
-        <div class="flex flex-row basis-3/4">
-            <div class="basis-1/3">
-                <nav>
-                    <h2 class="border-b-2">National nodes</h2>
-                    <ul>
-                        <li><a href="/organization/elixir-uib">University of Bergen (Coordinator)</a></li>
-                        <li><a href="/organization/elixir-uio">University of Oslo</a></li>
-                        <li><a href="/organization/elixir-uit">The Arctic University of Norway in Tromsø</a></li>
-                        <li><a href="/organization/elixir-ntnu">NTNU Trondheim</a></li>
-                        <li><a href="/organization/elixir-NMBU">NMBU Ås</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="basis-1/3">
-                <nav>
-                    <h2 class="border-b-2">International deliverables</h2>
-                    <ul>
-                        <li><a href="https://hyperbrowser.uio.no/hb">Genomic HyperBrowser</a></li>
-                        <li><a href="http://bioxsd.org">BioXSD/GTrack ecosystem</a></li>
-                        <li><a href="https://licebase.org/">LiceBase</a></li>
-                        <li><a href="https://mmp.sfb.uit.no/">METApipe</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="basis-1/3">
-                <nav>
-                    <h2 class="border-b-2">Upcoming events</h2>
-                    <ul>
-                        <li></li>
-                    </ul>
-                </nav>
-            </div>
+<footer class="max-w-1300">
+    <section class="bg-elixir-grey md:flex md:gap-5">
+        <div class="shrink-0 md:basis-2/6">
+            <nav >
+                <h2 class="border-b-2">National nodes</h2>
+                <ul>
+                    <li><a href="/organization/elixir-uib">University of Bergen (Coordinator)</a></li>
+                    <li><a href="/organization/elixir-uio">University of Oslo</a></li>
+                    <li><a href="/organization/elixir-uit">The Arctic University of Norway in Tromsø</a></li>
+                    <li><a href="/organization/elixir-ntnu">NTNU Trondheim</a></li>
+                    <li><a href="/organization/elixir-NMBU">NMBU Ås</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="basis-1/4 flex flex-col gap-x-10 space-y-4 px-20">
-            <a title="home" href={uibURL} target="_blank" rel="noopener">
-                <img src="img/logos/elixirNorway_eng_white_center.png" alt="elixirNorway_eng_white_center" width="150" />
-            </a>
-            <div class="flex flex-row space-x-4">
-
-                <a href="https://twitter.com/elixireurope" title="Twitter">
-                    <FontAwesomeIcon icon={faTwitterSquare} size="2xl"/>
-                </a>
-                <a href="https://www.linkedin.com/company/elixir-europe" title="LinkdIn">
-                    <FontAwesomeIcon icon={faLinkedinIn}  size="2xl"/>
-                </a>
-                <a href="https://www.youtube.com/channel/UCvwFIw5HomylguGOGxR8B8w" title="Youtube">
-                    <FontAwesomeIcon icon={faYoutubeSquare}  size="2xl" />
-                </a>
-                <a href="https://www.flickr.com/photos/elixir-europe/" title="flickr">
-                    <FontAwesomeIcon icon={faFlickr}  size="2xl"/>
-                </a>
-
+        <div class="shrink-0 min-w-fit md:basis-1/4">
+            <h2 class="border-b-2">International deliverables</h2>
+            <ul>
+                <li><a href="https://hyperbrowser.uio.no/hb">Genomic HyperBrowser</a></li>
+                <li><a href="http://bioxsd.org">BioXSD/GTrack ecosystem</a></li>
+                <li><a href="https://licebase.org/">LiceBase</a></li>
+                <li><a href="https://mmp.sfb.uit.no/">METApipe</a></li>
+            </ul>
+        </div>
+        <div class="md:basis-1/4">
+            <nav>
+                <h2 class="border-b-2">Upcoming events</h2>
+                <ul>
+                    <li></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="shrink-0 w-150 px-10 md:basis-1/5">
+            <div >
+                <nav>
+                    <a title="home" href="/">
+                        <img class="object-fit" src="img/logos/elixirNorway_eng_white_center.png" alt="elixirNorway_eng_white_center" />
+                    </a>
+                </nav>
             </div>
+            <span class="flex flex-row  mt-5">
+                <SocialIcon url="https://twitter.com/elixireurope" title="Twitter" icon={faTwitterSquare} />
+                <SocialIcon url="https://www.linkedin.com/company/elixir-europe" title="LinkdIn" icon={faLinkedinIn} />
+                <SocialIcon url="https://www.youtube.com/channel/UCvwFIw5HomylguGOGxR8B8w" title="Youtube" icon={faYoutubeSquare} />
+                <SocialIcon url="https://www.flickr.com/photos/elixir-europe" title="flickr" icon={faFlickr} />
+            </span>
         </div>
     </section>
-    <section class="bg-clip-padding p-4 bg-sky-900 text-white">
-        <div class="flex flex-row space-x-4 place-content-center me-100">
+    <section class="bg-clip-padding p-4 bg-elixir-blue text-white">
+        <span class="flex flex-row space-x-4 place-content-center me-100">
             <a title="UiB" href={uibURL} target="_blank" rel="noopener">
-                <img src="img/logos/UiB_eng_white_center.png" alt="UiBlogo_Eng_white_center" width="122" height="42" />
+                <img src={uibLogoWhite} alt="UiBlogo_Eng_white_center" width="122" height="42" />
             </a>
             <a title="NTNU" href={ntnuURL} target="_blank" rel="noopener">
                 <img src="img/logos/NTNU_eng_white_center.png" alt="NTNUlogo_Eng_white_center" width="187" height="36" />
             </a>
             <a title="UiT" href={uitURL} target="_blank" rel="noopener">
-                <img src="img/logos/UiT_no_white_center.png" alt="UiTlogo_no_white_center" width="47" height="47" />
+                <img src={ntnuLogoWhite} alt="UiTlogo_no_white_center" width="47" height="47" />
             </a>
             <a title="NMBU" href={nmbuURL} target="_blank" rel="noopener">
-                <img src="img/logos/NMBU_eng_lightgreen_center.png" alt="NMBU_eng_lightgreen_center" width="134" height="46" />
+                <img src={nmbuLogoWhite} alt="NMBU_eng_lightgreen_center" width="134" height="46" />
             </a>
             <a title="UiO" href={uioURL} target="_blank" rel="noopener">
-                <img src="img/logos/UiO_eng_red_center.png" alt="UiO_Eng_red_center" width="47" height="47" />
+                <img src={uioLogoWhite} alt="UiO_Eng_red_center" width="47" height="47" />
             </a>
             <a href={fkURL} target="_blank" rel="noopener">
-                <img src="img/logos/FR_eng_white_center.png" alt="FR_Eng_white_center" width="201" height="37" />
+                <img src={frLogoWhite} alt="FR_Eng_white_center" width="201" height="37" />
             </a>
-        </div>
+        </span>
         <address class="text-center bg-clip-padding p-4 text-2xl">
             <a href={contactAddress}>Contact us</a>
         </address>
