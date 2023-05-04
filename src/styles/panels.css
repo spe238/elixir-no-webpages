@@ -27,26 +27,31 @@
 
 .panel {
   display: flex;
-  border: 2px solid red;
+  background-color: white;
   min-width: 300px;
 }
 /*TODO: Resizing the panel eventually makes the columns overlap. We should have a way to make it look better. */
 
 .panel > .box {
-  border: 2px solid black; 
   float: right;
   width: 70%;
   min-width: 190px;
+  max-width: 400px;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
+.panel {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-width: 600px;
+}
 
 .column {
     float: left;
     width: 50%;
-}
-
-.row {
-
 }
 
 /* Clear floats after the columns */

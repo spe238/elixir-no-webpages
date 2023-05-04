@@ -1,12 +1,9 @@
 ---
-
-import HomeLayout from '@layouts/HomeLayout.astro';
-
 import MainLayout from '@layouts/MainLayout.astro';
+import Panel from "@components/Panel.astro";
 
 import '@styles/global.css';
-
-
+import '@styles/panels.css';
 ---
 
 <html lang="en">
@@ -20,7 +17,17 @@ import '@styles/global.css';
 	<body>
 		<MainLayout>
 			
-            <HomeLayout></HomeLayout>
+            <div class="row">
+				<div class="column">
+				  <Panel title="Helpdesk" bg_color="#F47D20" link="https://elixir.no/helpdesk" icon="../../public/img/icons/circle-question-solid-col.svg" description="Short- and long-term support with bioinformatics analyses, programming and data management tasks. Contact the helpdesk."/>
+				  <Panel title="NeLS e-infrastructure" bg_color="#005472" link="https://elixir.no/services/#h35ski0awr6isets8xsc475w18g2g5k" icon="../../public/img/icons/network-wired-solid-col.svg" description="NeLS, the Norwegian e-Infra­structure for Life Sciences, for analysis, sharing and storage of high throughput genomics data."/>
+				</div>
+					
+				<div class="column">
+				  <Panel title="Services" bg_color="#4D4848" link="https://elixir.no/services" icon="../../public/img/icons/screwdriver-wrench-solid-col.svg" description="Analysis and management of life science data within marine, health, genomics, proteomics, structural analysis and more."/>
+				  <Panel title="Training" bg_color="#BEBF32" link="https://elixir.no/training" icon="../../public/img/icons/user-graduate-solid-col.svg" description="Local and national training in bioinformatics analysis and use of our tools."/>
+				</div>
+			  </div>
 		</MainLayout>
         
 	</body>
