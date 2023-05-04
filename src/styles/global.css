@@ -4,6 +4,8 @@
 *::before,
 *::after {
 	box-sizing: border-box;
+	border-width: 0;
+	border-style: solid;
 }
 
 * {
@@ -44,6 +46,27 @@ h4,
 h5,
 h6 {
 	overflow-wrap: break-word;
+}
+
+ol,
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: unset;
+}
+
+input,
+button {
+	border: none;
+}
+
+button {
+	background-color: unset;
 }
 
 #root,
