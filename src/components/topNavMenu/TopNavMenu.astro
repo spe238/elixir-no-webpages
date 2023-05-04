@@ -1,0 +1,15 @@
+---
+import NavMenu from './NavMenu';
+import Searchbar from './Searchbar.astro';
+---
+
+<div class="flex flex-row items-center justify-between py-5">
+	<img
+		src="/img/elixir-no-logo-white.svg"
+		alt="ELIXIR Norway LOGO"
+		height={150}
+		width={150}
+	/>
+	<NavMenu client:load />
+	<Searchbar client:load />
+</div>
