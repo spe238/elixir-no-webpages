@@ -1,5 +1,31 @@
 ---
-import '@styles/global.css';
 ---
 
-<slot />
+<div class="grid h-full grid-rows-[minmax(500px,1fr)_2fr_200px]">
+	<div
+		class="fixed top-0 z-10 grid h-[100px] w-full grid-cols-[1fr_10fr_1fr] overflow-hidden bg-gray-900/30">
+		<div></div>
+		<div>
+			<!-- todo: Menu component comes here -->
+			<div class="flex gap-5 text-white">
+				<div>Item 1</div>
+				<div>Item 2</div>
+				<div>Item 3</div>
+				<div>Item 4</div>
+				<div>Item 5</div>
+			</div>
+		</div>
+		<div></div>
+	</div>
+	<div class="grid grid-cols-3 bg-gray-600">
+		<!-- todo: Carousel component comes here -->
+	</div>
+	<div class="grid grid-cols-[1fr_10fr_1fr]">
+		<div></div>
+		<slot />
+		<div></div>
+	</div>
+	<div class="bg-gray-800">
+		<!-- todo: Footer component comes here -->
+	</div>
+</div>
