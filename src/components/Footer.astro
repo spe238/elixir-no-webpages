@@ -23,21 +23,20 @@ import SocialIcon from "./SocialIcon.astro";
             <nav >
                 <h2 class="border-b-2">National nodes</h2>
                 <ul>
-                    <li><a href="/organization/elixir-uib">University of Bergen (Coordinator)</a></li>
-                    <li><a href="/organization/elixir-uio">University of Oslo</a></li>
-                    <li><a href="/organization/elixir-uit">The Arctic University of Norway in Tromsø</a></li>
-                    <li><a href="/organization/elixir-ntnu">NTNU Trondheim</a></li>
-                    <li><a href="/organization/elixir-NMBU">NMBU Ås</a></li>
+                    {dictNodes.map(node => (
+                      <li><a class="hover:underline" href={node.link}> {node.name}</a></li>
+                      )
+                    )}
                 </ul>
             </nav>
         </div>
         <div class="shrink-0 min-w-fit md:basis-1/4">
             <h2 class="border-b-2">International deliverables</h2>
             <ul>
-                <li><a href="https://hyperbrowser.uio.no/hb">Genomic HyperBrowser</a></li>
-                <li><a href="http://bioxsd.org">BioXSD/GTrack ecosystem</a></li>
-                <li><a href="https://licebase.org/">LiceBase</a></li>
-                <li><a href="https://mmp.sfb.uit.no/">METApipe</a></li>
+                {dictDelivrables.map(node => (
+                      <li><a class="hover:underline" href={node.link}> {node.name}</a></li>
+                      )
+                    )}
             </ul>
         </div>
         <div class="md:basis-1/4">
