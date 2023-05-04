@@ -17,8 +17,8 @@ import { faTwitterSquare, faLinkedinIn, faYoutubeSquare, faFlickr } from '@forta
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import SocialIcon from "./SocialIcon.astro";
 ---
-<footer class="max-w-1300">
-    <section class="bg-elixir-grey md:flex md:gap-5">
+<footer class="max-w-1300 text-white border-white text-sm leading-3">
+    <section class="bg-elixir-grey md:flex md:gap-5 md:justify-between py-5 px-5">
         <div class="shrink-0 md:basis-2/6">
             <nav >
                 <h2 class="border-b-2">National nodes</h2>
@@ -63,7 +63,7 @@ import SocialIcon from "./SocialIcon.astro";
             </span>
         </div>
     </section>
-    <section class="bg-clip-padding p-4 bg-elixir-blue text-white">
+    <section class="bg-clip-padding p-4 bg-elixir-blue">
         <span class="flex flex-row space-x-4 place-content-center me-100">
             <a title="UiB" href={uibURL} target="_blank" rel="noopener">
                 <img src={uibLogoWhite} alt="UiBlogo_Eng_white_center" width="122" height="42" />
