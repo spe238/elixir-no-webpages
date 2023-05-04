@@ -24,7 +24,13 @@ module.exports = {
 	overrides: [
 		{
 			files: ['*.astro'],
-			plugins: ['astro'],
+			plugins: [
+				'@typescript-eslint',
+				'react',
+				'unused-imports',
+				'tailwindcss',
+				'simple-import-sort',
+			],
 			env: {
 				node: true,
 				'astro/astro': true,

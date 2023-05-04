@@ -8,11 +8,6 @@ The following works on both MacOS and Linux. If you are on Windows, set up wsl a
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 ```
-or 
-```zsh
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | zsh
-```
-
 #### 2. Install NodeJS
 ```bash
 nvm install --lts
