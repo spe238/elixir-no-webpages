@@ -2,7 +2,7 @@
 import '@styles/global.css';
 import '../globalVariables.ts'
 import {
-    contactAddress,
+    contactAddress, dictDelivrables, dictNodes, elixirNOLogoWhite,
     fkURL, frLogoWhite, nmbuLogoWhite,
     nmbuURL,
     ntnuLogoWhite,
@@ -21,7 +21,7 @@ import SocialIcon from "./SocialIcon.astro";
     <section class="bg-elixir-grey md:flex md:gap-5 md:justify-between py-5 px-5">
         <div class="shrink-0 md:basis-2/6">
             <nav >
-                <h2 class="border-b-2">National nodes</h2>
+                <h2 class="border-b">National nodes</h2>
                 <ul>
                     {dictNodes.map(node => (
                       <li><a class="hover:underline" href={node.link}> {node.name}</a></li>
@@ -31,7 +31,7 @@ import SocialIcon from "./SocialIcon.astro";
             </nav>
         </div>
         <div class="shrink-0 min-w-fit md:basis-1/4">
-            <h2 class="border-b-2">International deliverables</h2>
+            <h2 class="border-b">International deliverables</h2>
             <ul>
                 {dictDelivrables.map(node => (
                       <li><a class="hover:underline" href={node.link}> {node.name}</a></li>
@@ -39,19 +39,11 @@ import SocialIcon from "./SocialIcon.astro";
                     )}
             </ul>
         </div>
-        <div class="md:basis-1/4">
-            <nav>
-                <h2 class="border-b-2">Upcoming events</h2>
-                <ul>
-                    <li></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="shrink-0 w-150 px-10 md:basis-1/5">
+        <div class="shrink-0 md:basis-1/5">
             <div >
                 <nav>
                     <a title="home" href="/">
-                        <img class="object-fit" src="img/logos/elixirNorway_eng_white_center.png" alt="elixirNorway_eng_white_center" />
+                        <img src={elixirNOLogoWhite} alt="elixirNorway_eng_white_center" />
                     </a>
                 </nav>
             </div>
