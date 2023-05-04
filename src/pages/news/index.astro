@@ -1,0 +1,26 @@
+---
+import MainLayout from '@layouts/MainLayout.astro';
+
+import '@styles/global.css';
+
+const news = await Astro.glob('/src/pages/news/contents/*.md');
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>News</title>
+	</head>
+	<body>
+		<MainLayout>
+        {
+            news.map(content => 
+                <article>{content.frontmatter}</article>
+            )
+        }
+		</MainLayout>
+	</body>
+</html>
