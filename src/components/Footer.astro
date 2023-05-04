@@ -1,0 +1,163 @@
+---
+import '@styles/global.css';
+import '../globalVariables.ts';
+import {
+	contactAddress,
+	dictDelivrables,
+	dictNodes,
+	elixirNOLogoWhite,
+	fkURL,
+	frLogoWhite,
+	nmbuLogoWhite,
+	nmbuURL,
+	ntnuLogoWhite,
+	ntnuURL,
+	uibLogoWhite,
+	uibURL,
+	uioLogoWhite,
+	uioURL,
+	uitURL,
+} from '../globalVariables';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+	faTwitterSquare,
+	faLinkedinIn,
+	faYoutubeSquare,
+	faFlickr,
+} from '@fortawesome/free-brands-svg-icons';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import SocialIcon from './SocialIcon.astro';
+---
+
+<footer class="max-w-1300 border-white text-base leading-6 text-white">
+	<section class="bg-elixir-grey px-5 py-5 md:flex md:justify-between md:gap-5">
+		<div class="shrink-0 md:basis-2/6">
+			<nav>
+				<h2 class="border-b font-semibold">National nodes</h2>
+				<ul class="pt-1">
+					{
+						dictNodes.map(node => (
+							<li>
+								<a class="hover:underline" href={node.link}>
+									{' '}
+									{node.name}
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</nav>
+		</div>
+		<div class="min-w-fit shrink-0 md:basis-1/4">
+			<h2 class="border-b font-semibold">International deliverables</h2>
+			<ul class="pt-1">
+				{
+					dictDelivrables.map(node => (
+						<li>
+							<a
+								class="hover:underline"
+								href={node.link}
+								target="_blank"
+								rel="noopener">
+								{' '}
+								{node.name}
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</div>
+		<div class="shrink-0 md:basis-1/5">
+			<div>
+				<nav>
+					<a title="home" href="/">
+						<img src={elixirNOLogoWhite} alt="elixirNorway_eng_white_center" />
+					</a>
+				</nav>
+			</div>
+			<span class="mt-5 flex flex-row">
+				<SocialIcon
+					url="https://twitter.com/elixireurope"
+					title="Twitter"
+					icon={faTwitterSquare}
+				/>
+				<SocialIcon
+					url="https://www.linkedin.com/company/elixir-europe"
+					title="LinkdIn"
+					icon={faLinkedinIn}
+				/>
+				<SocialIcon
+					url="https://www.youtube.com/channel/UCvwFIw5HomylguGOGxR8B8w"
+					title="Youtube"
+					icon={faYoutubeSquare}
+				/>
+				<SocialIcon
+					url="https://www.flickr.com/photos/elixir-europe"
+					title="flickr"
+					icon={faFlickr}
+				/>
+			</span>
+		</div>
+	</section>
+	<section class="bg-elixir-blue bg-clip-padding p-4">
+		<span class="me-100 flex flex-row place-content-center space-x-4">
+			<a title="UiB" href={uibURL} target="_blank" rel="noopener">
+				<img
+					src={uibLogoWhite}
+					alt="UiBlogo_Eng_white_center"
+					width="122"
+					height="42"
+				/>
+			</a>
+			<a title="NTNU" href={ntnuURL} target="_blank" rel="noopener">
+				<img
+					src="img/logos/NTNU_eng_white_center.png"
+					alt="NTNUlogo_Eng_white_center"
+					width="187"
+					height="36"
+				/>
+			</a>
+			<a title="UiT" href={uitURL} target="_blank" rel="noopener">
+				<img
+					src={ntnuLogoWhite}
+					alt="UiTlogo_no_white_center"
+					width="47"
+					height="47"
+				/>
+			</a>
+			<a title="NMBU" href={nmbuURL} target="_blank" rel="noopener">
+				<img
+					src={nmbuLogoWhite}
+					alt="NMBU_eng_lightgreen_center"
+					width="134"
+					height="46"
+				/>
+			</a>
+			<a title="UiO" href={uioURL} target="_blank" rel="noopener">
+				<img
+					src={uioLogoWhite}
+					alt="UiO_Eng_red_center"
+					width="47"
+					height="47"
+				/>
+			</a>
+			<a href={fkURL} target="_blank" rel="noopener">
+				<img
+					src={frLogoWhite}
+					alt="FR_Eng_white_center"
+					width="201"
+					height="37"
+				/>
+			</a>
+		</span>
+		<address class="bg-clip-padding p-4 text-center text-2xl">
+			<a href={contactAddress}>Contact us</a>
+		</address>
+		<p class="text-center text-xs">
+			Financed by the Research Council of Norway’s grants 208481, 270068,
+			295932, the University of Bergen, the University of Oslo, the Arctic
+			University of Norway in Tromsø, the Norwegian University of Science and
+			Technology and the Norwegian University of Life Sciences: NMBU
+		</p>
+	</section>
+</footer>
