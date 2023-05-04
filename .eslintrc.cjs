@@ -60,6 +60,12 @@ module.exports = {
 				'react/react-in-jsx-scope': 'off',
 			},
 		},
+		{
+			files: ['*.cjs'],
+			rules: {
+				'@typescript-eslint/no-var-requires': 'off',
+			},
+		},
 	],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
