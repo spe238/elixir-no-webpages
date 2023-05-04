@@ -2,8 +2,9 @@
 import MainLayout from '@layouts/MainLayout.astro';
 
 import '@styles/global.css';
-import {dictNodes, listServicesEIn} from "../globalVariables";
+import {listServicesData, listServicesEIn, listServicesTools} from "../globalVariables";
 
+import {Content as PromoBanner} from '../pages/services/services.md';
 ---
 
 <MainLayout>
@@ -11,18 +12,33 @@ import {dictNodes, listServicesEIn} from "../globalVariables";
         <div>
             <h1>Services</h1>
             <p>ELIXIR Norway offers services and infrastructure for life science, including software tools and workflows, databases and storage. In addition ELIXIR Norway provides support through its national helpdesk and offers trainings. Moreover, ELIXIR Norway provides services to the international research community.</p>
-        </div>
-        <div>
             <h2>E-infrastructure</h2>
-            <div >
-                <nav class="grid grid-cols-2 gap-5">
-                    {
-						listServicesEIn.map(service => (
-                            <a class="bg-elixir-orange text-center py-5 text-white hover:bg-orange-600" id={service}>{service}</a>
-						))
-					}
-                </nav>
-            </div>
+            <nav class="grid grid-cols-2 gap-5">
+                {
+                    listServicesEIn.map(service => (
+                        <a class="bg-elixir-orange hover:bg-orange-600 text-center py-5 text-white" href={service.replace (/^/,'#')}>{service}</a>
+                    ))
+                }
+            </nav>
+            <h2>Tools and data resources</h2>
+            <nav class="grid grid-cols-3 gap-5">
+                {
+                    listServicesTools.map(service => (
+                        <a class="bg-elixir-blue hover:bg-blue-950 text-center py-5 text-white" href={service.replace (/^/,'#')}>{service}</a>
+                    ))
+                }
+            </nav>
+            <h2>Data management and data sharing</h2>
+            <nav class="grid grid-cols-3 gap-5">
+                {
+                    listServicesData.map(service => (
+                        <a class="bg-elixir-green hover:bg-lime-500 text-center py-5 text-white" href={service.replace (/^/,'#')}>{service}</a>
+                    ))
+                }
+            </nav>
+        </div>
+        <div class="border-t">
+            <PromoBanner />
         </div>
     </section>
 </MainLayout>
