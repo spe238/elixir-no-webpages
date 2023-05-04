@@ -1,11 +1,47 @@
+
+.icon {
+  float: left;
+  width: 150px;
+  height: 170px;
+}
+
+.icon > img {
+  width: 110px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.panel:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.panel_title {
+  font-size:large;
+  color: #047eaa;
+  font-weight: bold;
+}
+
+.panel > .text {
+  border: 2px solid black; 
+}
+
+
 .column {
     float: left;
     width: 50%;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+}
+
+.row {
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
