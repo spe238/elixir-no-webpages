@@ -26,10 +26,11 @@
 }
 
 .panel {
-  display: block;
+  display: flex;
   border: 2px solid red;
   min-width: 300px;
 }
+/*TODO: Resizing the panel eventually makes the columns overlap. We should have a way to make it look better. */
 
 .panel > .box {
   border: 2px solid black; 
