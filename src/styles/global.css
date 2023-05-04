@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* CSS reset for sane defaults */
 /* Do not make changes to this */
 *,
@@ -11,6 +7,7 @@
 }
 
 * {
+	font-family: 'Corbel';
 	margin: 0;
 }
 
