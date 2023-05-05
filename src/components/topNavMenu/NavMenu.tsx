@@ -15,19 +15,19 @@ export default function NavMenu() {
 		<div className="z-50">
 			<ul className="flex flex-row">
 				<li>
-					<NavMenuLink link="/elixir-no-webpages/" label="Home" />
+					<NavMenuLink link="/" label="Home" />
 				</li>
 				<li>
-					<NavMenuLink link="/elixir-no-webpages/services" label="Services" />
+					<NavMenuLink link="/services" label="Services" />
 				</li>
 				<li>
-					<NavMenuLink link="/elixir-no-webpages/training" label="Training" />
+					<NavMenuLink link="/training" label="Training" />
 				</li>
 				<li>
-					<NavMenuLink link="/elixir-no-webpages/news" label="News" />
+					<NavMenuLink link="/news" label="News" />
 				</li>
 				<li>
-					<NavMenuLink link="/elixir-no-webpages/events" label="Events" />
+					<NavMenuLink link="/events" label="Events" />
 				</li>
 				{/* about us */}
 				<li>
@@ -48,55 +48,43 @@ export default function NavMenu() {
 							<div className="flex flex-col lg:flex-row">
 								<div className="mx-2 my-1 flex flex-col items-center justify-start py-2 hover:rounded-md hover:bg-gray-700">
 									<NavMenuLink
-										link="/elixir-no-webpages/about/organisation"
+										link="/about/organisation"
 										label="Organisation"
 									/>
 									<NavMenuLink
-										link="/elixir-no-webpages/about/organisation/bergen"
+										link="/about/organisation/bergen"
 										label="Bergen"
 									/>
+									<NavMenuLink link="/about/organisation/oslo" label="Oslo" />
 									<NavMenuLink
-										link="/elixir-no-webpages/about/organisation/oslo"
-										label="Oslo"
-									/>
-									<NavMenuLink
-										link="/elixir-no-webpages/about/organisation/trondheim"
+										link="/about/organisation/trondheim"
 										label="Trondheim"
 									/>
 									<NavMenuLink
-										link="/elixir-no-webpages/about/organisation/tromsoe"
+										link="/about/organisation/tromsoe"
 										label="Tromsø"
 									/>
-									<NavMenuLink
-										link="/elixir-no-webpages/about/organisation/aas"
-										label="Ås"
-									/>
+									<NavMenuLink link="/about/organisation/aas" label="Ås" />
+								</div>
+								<div className="mx-2 my-1 flex flex-col items-center justify-start py-2 hover:rounded-md hover:bg-gray-700">
+									<NavMenuLink link="/about/biomeddata" label="BioMedData" />
+									<NavMenuLink link="/about/biomeddata/ls-rdm" label="LS RDM" />
 								</div>
 								<div className="mx-2 my-1 flex flex-col items-center justify-start py-2 hover:rounded-md hover:bg-gray-700">
 									<NavMenuLink
-										link="/elixir-no-webpages/about/biomeddata"
-										label="BioMedData"
-									/>
-									<NavMenuLink
-										link="/elixir-no-webpages/about/biomeddata/ls-rdm"
-										label="LS RDM"
-									/>
-								</div>
-								<div className="mx-2 my-1 flex flex-col items-center justify-start py-2 hover:rounded-md hover:bg-gray-700">
-									<NavMenuLink
-										link="/elixir-no-webpages/about/international-involvement"
+										link="/about/international-involvement"
 										label="International"
 									/>
 									<NavMenuLink
-										link="/elixir-no-webpages/about/international-involvement/elixir-eu"
+										link="/about/international-involvement/elixir-eu"
 										label="Elixir EU"
 									/>
 									<NavMenuLink
-										link="/elixir-no-webpages/about/international-involvement/eu-projects"
+										link="/about/international-involvement/eu-projects"
 										label="EU Projects"
 									/>
 									<NavMenuLink
-										link="/elixir-no-webpages/about/international-involvement/global-biodata-coalition"
+										link="/about/international-involvement/global-biodata-coalition"
 										label="Biodata"
 									/>
 								</div>
