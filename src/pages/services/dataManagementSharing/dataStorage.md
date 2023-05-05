@@ -2,7 +2,7 @@
 title: 'Data storage'
 id: 'data-storage'
 ---
-# Data storage
+### Data storage
 ELIXIR Norway offers an infrastructure for storage of scientific data, intended for scientific research projects with larger sets of data (minimum 1TB) for mid-term storage. We currently offer free storage of data up to 10TB. For larger projects, please contact us at [contact@bioinfo.no](mailto:contact@bioinfo.no).
 
 All research projects with a Norwegian partner with funding from national funding bodies (NFR, Universities, Helseforetak, etc) and EU grants are entitled to store life science data in NeLS. This also includes private companies and governmental research institutions.
