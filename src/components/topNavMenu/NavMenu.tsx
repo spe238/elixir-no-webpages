@@ -18,6 +18,9 @@ export default function NavMenu() {
 					<NavMenuLink link="/elixir-no-webpages/" label="Home" />
 				</li>
 				<li>
+					<NavMenuLink link="/elixir-no-webpages/helpdesk" label="Helpdesk" />
+				</li>
+				<li>
 					<NavMenuLink link="/elixir-no-webpages/services" label="Services" />
 				</li>
 				<li>
