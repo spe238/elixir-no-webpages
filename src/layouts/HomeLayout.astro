@@ -19,7 +19,7 @@ const { title } = Astro.props;
 		<title>{`Elixir Norway ${title || ''}`}</title>
 	</head>
 	<body>
-		<div class="grid h-full grid-rows-[1fr_200px]">
+		<div class="grid h-full grid-rows-[minmax(500px,1fr)_2fr_200px]">
 			<div
 				class="fixed top-0 z-10 grid h-[150px] w-full grid-cols-[1fr_10fr_1fr] overflow-visible bg-gray-900/80">
 				<div></div>
@@ -29,7 +29,10 @@ const { title } = Astro.props;
 				</div>
 				<div></div>
 			</div>
-			<div class="mt-[150px] grid grid-cols-[1fr_10fr_1fr] overflow-auto">
+			<div class="grid grid-cols-3 bg-gray-600">
+				<!-- todo: Carousel component comes here -->
+			</div>
+			<div class="grid grid-cols-[1fr_10fr_1fr]">
 				<div></div>
 				<div class="mb-5 mt-5"><slot /></div>
 				<div></div>

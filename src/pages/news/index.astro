@@ -1,0 +1,15 @@
+---
+import MainLayout from '@layouts/MainLayout.astro';
+
+const news = await Astro.glob('/src/pages/news/[summaries]/*.md');
+---
+
+<MainLayout title="News">
+	<div class="flex flex-col">
+		{
+			news.map(content => (
+				<article class="mb-5 mt-5" set:html={content.compiledContent()} />
+			))
+		}
+	</div>
+</MainLayout>
