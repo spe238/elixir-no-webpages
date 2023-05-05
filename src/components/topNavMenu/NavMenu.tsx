@@ -1,5 +1,5 @@
 import { CaretDownIcon } from '@radix-ui/react-icons';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const navMenuItemCSS =
 	'mx-2 text-xl text-white hover:underline hover:decoration-elixir-orange hover:decoration-2 hover:underline-offset-8';
