@@ -1,12 +1,14 @@
 ---
-import MainLayout from '@layouts/MainLayout.astro';
+import MainLayout from '../../layouts/MainLayout.astro';
 
-import '@styles/global.css';
+import '../../styles/global.css';
 
-const postsEInfra = await Astro.glob('../pages/services/eInfrastructures/*.md');
-const postsTools = await Astro.glob('../pages/services/tools/*.md');
+const postsEInfra = await Astro.glob(
+	'/src/pages/services/eInfrastructures/*.md'
+);
+const postsTools = await Astro.glob('/src/pages/services/tools/*.md');
 const postsDataMS = await Astro.glob(
-	'../pages/services/dataManagementSharing/*.md'
+	'/src/pages/services/dataManagementSharing/*.md'
 );
 ---
 
@@ -21,7 +23,7 @@ const postsDataMS = await Astro.glob(
 				and offers trainings. Moreover, ELIXIR Norway provides services to the
 				international research community.
 			</p>
-			<h2>E-infrastructure</h2>
+			<h2 class="mt-12">E-infrastructure</h2>
 			<nav class="grid grid-cols-2 gap-5">
 				{
 					postsEInfra.map(service => (
@@ -33,7 +35,7 @@ const postsDataMS = await Astro.glob(
 					))
 				}
 			</nav>
-			<h2>Tools and data resources</h2>
+			<h2 class="mt-8">Tools and data resources</h2>
 			<nav class="grid grid-cols-3 gap-5">
 				{
 					postsTools.map(service => (
@@ -45,7 +47,7 @@ const postsDataMS = await Astro.glob(
 					))
 				}
 			</nav>
-			<h2>Data management and data sharing</h2>
+			<h2 class="mt-8">Data management and data sharing</h2>
 			<nav class="grid grid-cols-3 gap-5">
 				{
 					postsDataMS.map(service => (
