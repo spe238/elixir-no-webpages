@@ -1,6 +1,6 @@
 ---
 import '@styles/global.css';
-import '../globalVariables.ts';
+import '../globalVariables';
 import {
 	contactAddress,
 	dictDelivrables,
@@ -18,7 +18,6 @@ import {
 	uioURL,
 	uitURL,
 } from '../globalVariables';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faTwitterSquare,
 	faLinkedinIn,
@@ -111,7 +110,7 @@ import SocialIcon from './SocialIcon.astro';
 			</a>
 			<a title="NTNU" href={ntnuURL} target="_blank" rel="noopener">
 				<img
-					src="img/logos/NTNU_eng_white_center.png"
+					src={ntnuLogoWhite}
 					alt="NTNUlogo_Eng_white_center"
 					width="187"
 					height="36"
@@ -154,7 +153,7 @@ import SocialIcon from './SocialIcon.astro';
 			<a href={contactAddress}>Contact us</a>
 		</address>
 		<p class="text-center text-xs">
-			Financed by the Research Council of Norway’s grants 208481, 270068,
+			Financed by the Research Council of Norway's grants 208481, 270068,
 			295932, the University of Bergen, the University of Oslo, the Arctic
 			University of Norway in Tromsø, the Norwegian University of Science and
 			Technology and the Norwegian University of Life Sciences: NMBU
