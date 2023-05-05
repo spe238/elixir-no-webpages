@@ -2,13 +2,10 @@
 import MainLayout from '@layouts/MainLayout.astro';
 
 import '@styles/global.css';
-import {listServicesData, listServicesEIn, listServicesTools} from "../globalVariables";
 
 const postsEInfra = await Astro.glob('../pages/services/eInfrastructures/*.md');
 const postsTools = await Astro.glob('../pages/services/tools/*.md');
 const postsDataMS = await Astro.glob('../pages/services/dataManagementSharing/*.md');
-
-
 ---
 
 <MainLayout>
@@ -59,5 +56,6 @@ const postsDataMS = await Astro.glob('../pages/services/dataManagementSharing/*.
 
 
         </div>
+        <a href="#top">Go back to top</a>
     </section>
 </MainLayout>
