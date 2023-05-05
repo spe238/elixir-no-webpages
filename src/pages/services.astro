@@ -9,7 +9,7 @@ const postsDataMS = await Astro.glob('../pages/services/dataManagementSharing/*.
 ---
 
 <MainLayout>
-    <section class="text-left max-w-1140">
+    <section class="text-left max-w-1140 flex flex-col">
         <div>
             <h1>Services</h1>
             <p>ELIXIR Norway offers services and infrastructure for life science, including software tools and workflows, databases and storage. In addition ELIXIR Norway provides support through its national helpdesk and offers trainings. Moreover, ELIXIR Norway provides services to the international research community.</p>
@@ -38,7 +38,7 @@ const postsDataMS = await Astro.glob('../pages/services/dataManagementSharing/*.
                 }
             </nav>
         </div>
-        <div class="border-t flex flex-col [&>*:is(h3)]:mt-12 [&>p]:mt-5">
+        <div class="border-t mt-12 flex flex-col [&>*:is(h3)]:mt-12 [&>p]:mt-5">
 
             {postsEInfra.map((itemEI) =>
                 <itemEI.Content />
