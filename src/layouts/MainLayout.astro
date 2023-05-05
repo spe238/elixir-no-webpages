@@ -4,26 +4,32 @@ import TopNavMenu from '@components/topNavMenu/TopNavMenu.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<div class="grid h-full grid-rows-[minmax(500px,1fr)_2fr_200px]">
-	<div
-		class="fixed top-0 z-10 grid h-[150px] w-full grid-cols-[1fr_10fr_1fr] overflow-visible bg-gray-900/30">
-		<div></div>
-		<div>
-			<!-- todo: Menu component comes here -->
-			<TopNavMenu />
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{`Elixir Norway ${title || ''}`}</title>
+	</head>
+	<body>
+		<div class="grid grid-rows-[auto_1fr_200px]">
+			<div
+				class="sticky top-0 z-10 grid grid-cols-[1fr_10fr_1fr] bg-gray-900/80">
+				<div></div>
+				<div>
+					<TopNavMenu />
+				</div>
+				<div></div>
+			</div>
+			<div class="grid grid-cols-[1fr_10fr_1fr]">
+				<div></div>
+				<div class="mt-5 mb-5"><slot /></div>
+				<div></div>
+			</div>
+			<div class="bg-gray-800 align-bottom">
+				<Footer />
+			</div>
 		</div>
-		<div></div>
-	</div>
-	<div class="grid grid-cols-3 bg-gray-600">
-		<!-- todo: Carousel component comes here -->
-	</div>
-	<div class="grid grid-cols-[1fr_10fr_1fr]">
-		<div></div>
-		<slot />
-		<div></div>
-	</div>
-	<div class="bg-gray-800">
-		<!-- todo: Footer component comes here -->
-		<Footer />
 	</div>
 </div>
