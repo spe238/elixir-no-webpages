@@ -1,0 +1,124 @@
+---
+import MainLayout from '@layouts/MainLayout.astro';
+import '@styles/global.css';
+---
+
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<MainLayout>
+            <div>
+                <h1>HELPDESK</h1>
+
+                <p class="panel">
+                    Contact our nationally coordinated Helpdesk to get advise and support on most topics regarding bioinformatics and data management.
+                </p>
+
+                <h3>How to get help?</h3>
+
+                <p><strong>IMPORTANT NOTE!</strong></p>
+
+
+                <p>
+                    <strong> 
+                        Our request tracker service through contact@bioinfo.no is unfortunately out of order. While we are working hard to fix this issue, kindly contact our Helpdesk heads <a href="mailto:David.Dolan@uib.no">David Dolan</a> and <a href="mailto:dorota.j.buczek@uit.no">Dorota Buczek</a> directly if you are in need of support.
+                    </strong>
+                </p>
+
+                <p>
+                    <strong>
+                        We are very sorry for the inconvenience and thank you for your patience!
+                    </strong>
+                </p>
+
+                <h3>Contact us by email at<span style="text-decoration: line-through;"> contact@bioinfo.no</span></h3>
+                <p>
+                    The request then goes out to all members of the Helpdesk and is picked up by the one with the most expertise on the particular topic.
+                </p>
+
+                <h3>Usage instructions</h3>
+                <p>
+                    ELIXIR Norway also hosts a documentation for the use of our infrastructure. The documentation can be found <a href="https://nels-docs.readthedocs.io/en/latest/">here.</a>
+                </p>
+
+                <h3>Storage request</h3>
+                <p>
+                    To apply for a storage quota, download and fill in a storage request form (spread sheet) from <a href="https://github.com/elixir-no-nels/nels-docs/blob/main/docs/files/ELIXIR_Norway_StorageRequestForm_rev2021.xlsx">here.</a>
+                </p>
+
+                <h3>Support model</h3>
+                <p>
+                    Projects that can be solved within two working days or less are free of charge (enabled by funding from the Research Council of Norway). For more comprehensive projects, an hourly rate applies and you need to enter an <a href="https://elixir.no/helpdesk/agreement">agreement</a> with ELIXIR Norway on this.
+                </p>
+
+                <p>
+                    <br/>
+                    Projects that require an effort beyond technical assistance/consultancy may be set up as a research collaboration, e.g. by providing funding for a percentage of the position of a helpdesk member.
+                </p>
+            </div>
+
+
+            <div class="subnav tinted">
+                    <h2 style="text-align: center;">We offer the following types of support:</h2>
+                    <p style="text-align: center;">
+                        General advice and experimental design consultancy
+                        <br/>
+                        Programming and scripting assistance
+                        <br/>
+                        Data analysis
+                        <br/>
+                        Data management and storage
+                    </p>
+
+                    <br/>
+
+                    <h2 style="text-align: center;">We have experience working with data types such as:</h2>
+                    <p style="text-align: center;">
+                        High-throughput sequence data (DNA / RNA)
+                        <br/>
+                        Proteomics data
+                        <br/>
+                        Chip-seq data
+                        <br/>
+                        Structural data
+                    </p>
+
+                    <br/>
+
+                    <h2 style="text-align: center;">We have expertise in a wide range of biological and medical fields, including:</h2>
+                    <p style="text-align: center;">
+                        Genome and transcriptome assembly
+                        <br/>
+                        Variant calling
+                        <br/>
+                        Annotation
+                        <br/>
+                        Gene expression, coding and noncoding
+                        <br/>
+                        Methylation and epigenetics
+                        <br/>
+                        Statistical genomics
+                        <br/>
+                        Network analysis
+                        <br/>
+                        Metagenomics
+                        <br/>
+                        Microbial genomics
+                        <br/>
+                        Cancer
+                        <br/>
+                        Health
+                        <br/>
+                        Marine
+                    </p>
+                </div>    
+		</MainLayout>
+	</body>
+</html>
