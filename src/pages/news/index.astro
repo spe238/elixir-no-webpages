@@ -1,7 +1,7 @@
 ---
 import MainLayout from '@layouts/MainLayout.astro';
 
-const news = await Astro.glob('/src/pages/news/[summaries]/*.md');
+const news = await Astro.glob('/src/pages/news/summaries/*.md');
 ---
 
 <MainLayout title="News">
