@@ -38,18 +38,18 @@ const postsDataMS = await Astro.glob('../pages/services/dataManagementSharing/*.
                 }
             </nav>
         </div>
-        <div class="border-t">
+        <div class="border-t flex flex-col [&>*:is(h3)]:mt-12 [&>p]:mt-5">
 
             {postsEInfra.map((itemEI) =>
                 <itemEI.Content />
             )}
 
             {postsTools.map((itemT) =>
-                <itemT.Content />
+                <itemT.Content classType="mt-6" />
             )}
 
             {postsDataMS.map((itemDMS) =>
-                <itemDMS.Content />
+                <itemDMS.Content classType="mt-6" />
             )}
 
         </div>
