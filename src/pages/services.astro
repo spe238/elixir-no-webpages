@@ -5,54 +5,66 @@ import '@styles/global.css';
 
 const postsEInfra = await Astro.glob('../pages/services/eInfrastructures/*.md');
 const postsTools = await Astro.glob('../pages/services/tools/*.md');
-const postsDataMS = await Astro.glob('../pages/services/dataManagementSharing/*.md');
+const postsDataMS = await Astro.glob(
+	'../pages/services/dataManagementSharing/*.md'
+);
 ---
 
 <MainLayout>
-    <section class="text-left max-w-1140 flex flex-col">
-        <div>
-            <h1>Services</h1>
-            <p>ELIXIR Norway offers services and infrastructure for life science, including software tools and workflows, databases and storage. In addition ELIXIR Norway provides support through its national helpdesk and offers trainings. Moreover, ELIXIR Norway provides services to the international research community.</p>
-            <h2>E-infrastructure</h2>
-            <nav class="grid grid-cols-2 gap-5">
-                {
-                    postsEInfra.map(service => (
-                        <a class="bg-elixir-orange hover:bg-orange-600 text-center py-5 text-white" href={service.frontmatter.id.replace (/^/,'#')}>{service.frontmatter.title}</a>
-                    ))
-                }
-            </nav>
-            <h2>Tools and data resources</h2>
-            <nav class="grid grid-cols-3 gap-5">
-                {
-                    postsTools.map(service => (
-                        <a class="bg-elixir-blue hover:bg-blue-950 text-center py-5 text-white" href={service.frontmatter.id.replace (/^/,'#')}>{service.frontmatter.title}</a>
-                    ))
-                }
-            </nav>
-            <h2>Data management and data sharing</h2>
-            <nav class="grid grid-cols-3 gap-5">
-                {
-                    postsDataMS.map(service => (
-                        <a class="bg-elixir-green hover:bg-lime-500 text-center py-5 text-white" href={service.frontmatter.id.replace (/^/,'#')}>{service.frontmatter.title}</a>
-                    ))
-                }
-            </nav>
-        </div>
-        <div class="border-t mt-12 flex flex-col [&>*:is(h3)]:mt-12 [&>p]:mt-5">
+	<section class="max-w-1140 flex flex-col text-left">
+		<div>
+			<h1>Services</h1>
+			<p>
+				ELIXIR Norway offers services and infrastructure for life science,
+				including software tools and workflows, databases and storage. In
+				addition ELIXIR Norway provides support through its national helpdesk
+				and offers trainings. Moreover, ELIXIR Norway provides services to the
+				international research community.
+			</p>
+			<h2>E-infrastructure</h2>
+			<nav class="grid grid-cols-2 gap-5">
+				{
+					postsEInfra.map(service => (
+						<a
+							class="bg-elixir-orange py-5 text-center text-white hover:bg-orange-600"
+							href={service.frontmatter.id.replace(/^/, '#')}>
+							{service.frontmatter.title}
+						</a>
+					))
+				}
+			</nav>
+			<h2>Tools and data resources</h2>
+			<nav class="grid grid-cols-3 gap-5">
+				{
+					postsTools.map(service => (
+						<a
+							class="bg-elixir-blue py-5 text-center text-white hover:bg-blue-950"
+							href={service.frontmatter.id.replace(/^/, '#')}>
+							{service.frontmatter.title}
+						</a>
+					))
+				}
+			</nav>
+			<h2>Data management and data sharing</h2>
+			<nav class="grid grid-cols-3 gap-5">
+				{
+					postsDataMS.map(service => (
+						<a
+							class="bg-elixir-green py-5 text-center text-white hover:bg-lime-500"
+							href={service.frontmatter.id.replace(/^/, '#')}>
+							{service.frontmatter.title}
+						</a>
+					))
+				}
+			</nav>
+		</div>
+		<div class="mt-12 flex flex-col border-t [&>*:is(h3)]:mt-12 [&>p]:mt-5">
+			{postsEInfra.map(itemEI => <itemEI.Content />)}
 
-            {postsEInfra.map((itemEI) =>
-                <itemEI.Content />
-            )}
+			{postsTools.map(itemT => <itemT.Content classType="mt-6" />)}
 
-            {postsTools.map((itemT) =>
-                <itemT.Content classType="mt-6" />
-            )}
-
-            {postsDataMS.map((itemDMS) =>
-                <itemDMS.Content classType="mt-6" />
-            )}
-
-        </div>
-        <a href="#top">Go back to top</a>
-    </section>
+			{postsDataMS.map(itemDMS => <itemDMS.Content classType="mt-6" />)}
+		</div>
+		<a href="#top">Go back to top</a>
+	</section>
 </MainLayout>
