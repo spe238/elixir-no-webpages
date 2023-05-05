@@ -1,3 +1,6 @@
+---
+title: 'All services'
+---
 # NeLS
 The Norwegian e-infrastructure for life sciences (NeLS), is a unique national portal for sharing, analysis and mid-term storage of non-sensitive molecular life science data. (See also our separate services for sensitive data).
 
