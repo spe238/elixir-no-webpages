@@ -59,38 +59,38 @@
     width: 33%;
 }
 
-.outer-container {
+.outer_container {
     display: flex;
     width: 100%;
     text-align: left;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     flex-direction: column;
 }
 
 
-ul {
+.outer_container ul {
   margin-top: 15px;
   list-style-type: circle;
   list-style-position: inside;
 }
 
-ul li {
+.outer_container ul li {
   color: #F47D20;
   font-size: 20px;
 }
 
-ul li span {
+.outer_container ul li span {
   color: black;
   font-size: 16px;
 }
 
-a {
+.outer_container a {
   color: #005472;
   text-decoration:none;
 }
 
-a:hover {
+.outer_container a:hover {
   text-decoration:underline;
 }
 
