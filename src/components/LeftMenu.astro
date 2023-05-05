@@ -10,13 +10,22 @@ const { menuName, menuItems } = Astro.props as LeftMenuProps;
 	</p>
 	<div class="flex h-fit flex-col">
 		{
-			menuItems.map(item => (
+			menuItems && menuItems.map(item => (
 				<ol>
-					<li class="m-1 p-1 text-center hover:m-1 hover:rounded-md hover:bg-elixir-grey/80 hover:text-white">
+					<li class="m-1 p-1 text-center font-bold hover:m-1 hover:rounded-md hover:bg-elixir-grey/80 hover:text-white">
 						<a href={item.link}>{item.label}</a>
-					</li>
-				</ol>
-			))
-		}
+						{item.subItems && (
+              				<ul class="ml-0">
+                				{item.subItems.map(subItem => (
+                  					<li class="m-1 p-1 text-center font-normal hover:m-1 hover:rounded-md hover:bg-elixir-orange/80 hover:text-white">
+                    					<a href={subItem.link}>{subItem.label}</a>
+                  					</li>
+                				))}
+              				</ul>
+            			)}
+          			</li>
+        		</ol>
+     		))
+    	}
 	</div>
 </div>
