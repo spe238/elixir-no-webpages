@@ -18,10 +18,10 @@ export default function NavMenu() {
 					<NavMenuLink link="/elixir-no-webpages/training" label="Training" />
 				</Nav.Item>
 				<Nav.Item>
-					<NavMenuLink link="elixir-no-webpages/news" label="News" />
+					<NavMenuLink link="/elixir-no-webpages/news" label="News" />
 				</Nav.Item>
 				<Nav.Item>
-					<NavMenuLink link="elixir-no-webpages/events" label="Events" />
+					<NavMenuLink link="/elixir-no-webpages/events" label="Events" />
 				</Nav.Item>
 				{/* about us */}
 				<Nav.Item>
