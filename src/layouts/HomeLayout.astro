@@ -21,7 +21,7 @@ const { title } = Astro.props;
 	<body>
 		<div class="grid h-full grid-rows-[minmax(500px,1fr)_2fr_200px]">
 			<div
-				class="fixed top-0 z-10 grid h-[150px] w-full grid-cols-[1fr_10fr_1fr] overflow-visible bg-gray-900/70">
+				class="fixed top-0 z-10 grid h-[150px] w-full grid-cols-[1fr_10fr_1fr] overflow-visible bg-gray-900/80">
 				<div></div>
 				<div>
 					<!-- todo: Menu component comes here -->
@@ -34,10 +34,10 @@ const { title } = Astro.props;
 			</div>
 			<div class="grid grid-cols-[1fr_10fr_1fr]">
 				<div></div>
-				<slot />
+				<div class="mt-5 mb-5"><slot /></div>
 				<div></div>
 			</div>
-			<div class="bg-gray-800">
+			<div class="bg-gray-800 align-bottom">
 				<!-- todo: Footer component comes here -->
 				<Footer />
 			</div>

@@ -19,9 +19,9 @@ const { title } = Astro.props;
 		<title>{`Elixir Norway ${title || ''}`}</title>
 	</head>
 	<body>
-		<div class="grid h-full grid-rows-[minmax(500px,1fr)_2fr_200px]">
+		<div class="grid h-full grid-rows-[1fr_200px]">
 			<div
-				class="fixed top-0 z-10 grid h-[100px] w-full grid-cols-[1fr_10fr_1fr] overflow-hidden bg-gray-900/70">
+				class="fixed top-0 z-10 grid w-full h-[150px] grid-cols-[1fr_10fr_1fr] overflow-visible bg-gray-900/80">
 				<div></div>
 				<div>
 					<!-- todo: Menu component comes here -->
@@ -29,12 +29,12 @@ const { title } = Astro.props;
 				</div>
 				<div></div>
 			</div>
-			<div class="mt-[100px] grid grid-cols-[1fr_10fr_1fr]">
+			<div class="mt-[150px] grid grid-cols-[1fr_10fr_1fr] overflow-auto">
 				<div></div>
-				<slot />
+				<div class="mt-5 mb-5"><slot /></div>
 				<div></div>
 			</div>
-			<div class="bg-gray-800">
+			<div class="bg-gray-800 align-bottom">
 				<!-- todo: Footer component comes here -->
 				<Footer />
 			</div>
