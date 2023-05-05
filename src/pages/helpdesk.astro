@@ -1,6 +1,9 @@
 ---
 import MainLayout from '@layouts/MainLayout.astro';
+import Panel from "@components/Panel.astro";
+
 import '@styles/global.css';
+import '@styles/panels.css';
 ---
 
 
@@ -15,11 +18,7 @@ import '@styles/global.css';
 	<body>
 		<MainLayout>
             <div>
-                <h1>HELPDESK</h1>
-
-                <p class="panel">
-                    Contact our nationally coordinated Helpdesk to get advise and support on most topics regarding bioinformatics and data management.
-                </p>
+                <Panel title="Helpdesk" bg_color="#F47D20" link="https://elixir.no/helpdesk" icon="../../public/img/icons/circle-question-solid-col.svg" description="Contact our nationally coordinated Helpdesk to get advise and support on most topics regarding bioinformatics and data management."/>
 
                 <h3>How to get help?</h3>
 
@@ -65,9 +64,9 @@ import '@styles/global.css';
             </div>
 
 
-            <div class="subnav tinted">
-                    <h2 style="text-align: center;">We offer the following types of support:</h2>
-                    <p style="text-align: center;">
+            <div class="right_side_column">
+                    <h2>We offer the following types of support:</h2>
+                    <p>
                         General advice and experimental design consultancy
                         <br/>
                         Programming and scripting assistance
@@ -77,10 +76,8 @@ import '@styles/global.css';
                         Data management and storage
                     </p>
 
-                    <br/>
-
-                    <h2 style="text-align: center;">We have experience working with data types such as:</h2>
-                    <p style="text-align: center;">
+                    <h2>We have experience working with data types such as:</h2>
+                    <p>
                         High-throughput sequence data (DNA / RNA)
                         <br/>
                         Proteomics data
@@ -90,10 +87,8 @@ import '@styles/global.css';
                         Structural data
                     </p>
 
-                    <br/>
-
-                    <h2 style="text-align: center;">We have expertise in a wide range of biological and medical fields, including:</h2>
-                    <p style="text-align: center;">
+                    <h2>We have expertise in a wide range of biological and medical fields, including:</h2>
+                    <p>
                         Genome and transcriptome assembly
                         <br/>
                         Variant calling
