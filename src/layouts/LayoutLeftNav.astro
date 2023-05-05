@@ -21,7 +21,7 @@ const { menuName, menuItems } = Astro.props as LeftMenuProps;
 		<!-- todo: Carousel component comes here -->
 	</div>
 	<div class="grid grid-cols-[2fr_8fr_2fr]">
-		<LeftMenu {menuName} {menuItems} />
+		<LeftMenu menuName={menuName} menuItems={menuItems} />
 		<div>
 			<slot />
 		</div>
