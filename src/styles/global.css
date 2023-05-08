@@ -78,3 +78,7 @@ button {
 html {
 	@apply bg-slate-200;
 }
+
+.main-content * a {
+	@apply text-elixir-blue;
+}
