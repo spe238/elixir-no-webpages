@@ -2,7 +2,7 @@
 title: About ELIXIR Norway
 ---
 <p class="text-xl">
-<span class="font-bold">Norwegian universities providing infrastructure and support for data-driven life science research.</span>
+<span class="font-bold">ELIXIR Norway is a collaboration between five universities across Norway, and is part of ELIXIR Europe - an intergovernmental organisation that brings together life science resources from across Europe.</span>
 <p>
 
 ## Part of ELIXIR Europe

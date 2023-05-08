@@ -1,5 +1,5 @@
 ---
-import HomeLayout from '@layouts/HomeLayout.astro';
+import MainLayout from '@layouts/MainLayout.astro';
 import LeftMenu from '@components/LeftMenu.astro';
 import RightMenu from '@components/RightMenu.astro';
 import '@styles/global.css';
@@ -18,52 +18,50 @@ export interface Props {
         <title>Astro</title>
     </head>
     <body>
-        <HomeLayout title="About ELIXIR Norway">
-            <div class="row-start-2"></div>
-                <div class='grid grid-cols-[250px,10fr,250px] gap-4'>
-                    <div class="about-left-navigation">
-                        <LeftMenu
-                            className="about-left-navigation"
-                            menuName='MENU'
-                            menuItems= {[
-                                {
-                                    link: '/about/organisation',
-                                    label: 'Organisation',
-                                    subItems: [
-                                        { label: 'Bergen', link: '/about/organisation/bergen', },
-                                        { label: 'Oslo', link: '/about/organisation/oslo', },
-                                        { label: 'Tromsø', link: '/about/organisation/tromsoe', },
-                                        { label: 'Trondheim', link: '/about/organisation/trondheim', },
-                                        { label: 'Ås', link: '/about/organisation/aas', },
-                                    ],
-                                },
-                                {
-                                    link: '/about/biomeddata',
-                                    label: 'BioMedData',
-                                    subItems: [
-                                        { label: 'LS RDM', link: '/about/biomeddata/ls-rdm', },
-                                    ],
-                                },
-                                {
-                                    link: '/about/international',
-                                    label: 'International',
-                                    subItems: [
-                                        { label: 'ELIXIR EU', link: '/about/international-involvement/elixir-eu', },
-                                        { label: 'EU projects', link: '/about/international-involvement/eu-projects', },
-                                        { label: 'Sensitive data', link: '/about/international-involvement/nordic-sensitive-data', },
-                                        { label: 'Biodata', link: '/about/international-involvement/biodata', },
-                                    ],
-                                },
+        <MainLayout title="About ELIXIR Norway">
+            <div class='relative grid grid-cols-[250px,10fr,250px] gap-4'>
+                <div class="sticky top-0 about-left-navigation">
+                    <LeftMenu
+                        className="fixed about-left-navigation"
+                        menuName='MENU'
+                        menuItems= {[
+                            {
+                                link: '/about/organisation',
+                                label: 'Organisation',
+                                subItems: [
+                                    { label: 'Bergen', link: '/about/organisation/bergen', },
+                                    { label: 'Oslo', link: '/about/organisation/oslo', },
+                                    { label: 'Tromsø', link: '/about/organisation/tromsoe', },
+                                    { label: 'Trondheim', link: '/about/organisation/trondheim', },
+                                    { label: 'Ås', link: '/about/organisation/aas', },
+                                ],
+                            },
+                            {
+                                link: '/about/biomeddata',
+                                label: 'BioMedData',
+                                subItems: [
+                                    { label: 'LS RDM', link: '/about/biomeddata/ls-rdm', },
+                                ],
+                            },
+                            {
+                                link: '/about/international',
+                                label: 'International',
+                                subItems: [
+                                    { label: 'ELIXIR EU', link: '/about/international-involvement/elixir-eu', },
+                                    { label: 'EU projects', link: '/about/international-involvement/eu-projects', },
+                                    { label: 'Sensitive data', link: '/about/international-involvement/nordic-sensitive-data', },
+                                    { label: 'Biodata', link: '/about/international-involvement/biodata', },
+                                ],
+                            },
                             
-                            ]}
-                        />
-                    </div>
-                    <div class="mb-5 mt-5 col-start-2"><slot /></div>
-                    <div class="col-start-3">
-                        <RightMenu />
-                    </div>
+                        ]}
+                    />
+                </div>
+                <div class="overflow-y-auto mb-5 mt-5 max-h-screen col-start-2"><slot /></div>
+                <div class="sticky top-0 col-start-3">
+                    <RightMenu />
                 </div>
             </div>
-        </HomeLayout>
+        </MainLayout>
     </body>
 </html>
