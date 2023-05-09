@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Searchbar: React.FC = () => {
 	return (
-		<div className="rounded-full bg-rose-500 p-2 px-3 text-white hover:bg-rose-700">
+		<div className="rounded-full bg-elixir-orange p-2  px-3 text-white transition hover:bg-orange-600">
 			<FontAwesomeIcon icon={faMagnifyingGlass} />
 		</div>
 	);

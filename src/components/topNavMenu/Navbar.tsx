@@ -9,22 +9,22 @@ const Navbar: React.FC = () => {
       sm:flex">
 			<a
 				href={`${globalHomeRoute}/about`}
-				className="rounded-full px-3 py-1 hover:bg-gray-200">
+				className="rounded-full p-3 transition hover:bg-gray-200">
 				About Us
 			</a>
 			<a
 				href={`${globalHomeRoute}/helpdesk`}
-				className="rounded-full px-3 py-1 hover:bg-gray-200">
+				className="rounded-full p-3 transition hover:bg-gray-200">
 				Help Desk
 			</a>
 			<a
 				href={`${globalHomeRoute}/News`}
-				className="rounded-full px-3 py-1 hover:bg-gray-200">
+				className="rounded-full p-3 transition hover:bg-gray-200">
 				News
 			</a>
 			<a
 				href={`${globalHomeRoute}/Events`}
-				className="rounded-full px-3 py-1 hover:bg-gray-200">
+				className="rounded-full p-3 transition hover:bg-gray-200">
 				Events
 			</a>
 			<Searchbar />
