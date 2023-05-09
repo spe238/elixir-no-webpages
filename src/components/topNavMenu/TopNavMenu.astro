@@ -1,6 +1,6 @@
 ---
 import NavMenu from './NavMenu';
-import Searchbar from './Searchbar';
+import Searchbar from '@components/topNavMenu/Searchbar.astro';
 import { elixirNOLogoWhiteSvg } from 'src/globalVariables';
 ---
 
@@ -12,5 +12,5 @@ import { elixirNOLogoWhiteSvg } from 'src/globalVariables';
 		width={150}
 	/>
 	<NavMenu client:load />
-	<Searchbar client:load />
+	<Searchbar />
 </div>

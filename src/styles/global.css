@@ -69,6 +69,10 @@ button {
 	background-color: unset;
 }
 
+button:hover {
+	cursor: pointer;
+}
+
 #root,
 #__next {
 	isolation: isolate;

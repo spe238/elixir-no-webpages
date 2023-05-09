@@ -38,3 +38,6 @@ export const dictDelivrables = [
 	{ name: 'LiceBase', link: 'https://licebase.org' },
 	{ name: 'METApipe', link: 'https://mmp.sfb.uit.no' },
 ];
+
+// Global query strings
+export const searchQueryString = 'search';
