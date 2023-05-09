@@ -54,4 +54,4 @@ jobs:
           same_commit: True
           
       - name: Build astro pages
-        run: pnpm build
+        run: pnpm astro check && pnpm tsc --noEmit && pnpm astro build
