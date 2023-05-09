@@ -46,15 +46,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       
-      - name: Install astro
-        run: pnpm add -g astro
-      
       - name: Prettify code
         uses: creyD/prettier_action@v4.3
         with:
           prettier_plugins: "prettier-plugin-tailwindcss prettier-plugin-astro"
           prettier_options: '--config ./.prettierrc.json --write src/**/*.{astro,ts,tsx,md,mdx}'
           same_commit: True    
-          
-      - name: Build astro pages
-        run: pnpm build
