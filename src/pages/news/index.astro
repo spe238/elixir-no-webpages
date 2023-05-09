@@ -1,6 +1,5 @@
 ---
 import MainLayout from '@layouts/MainLayout.astro';
-import Searchbar from '@components/topNavMenu/Searchbar.astro';
 import { getLastUrlSegment } from '@utils/url';
 import { searchQueryString } from 'src/globalVariables';
 
@@ -15,7 +14,9 @@ const news = summaries
 				getLastUrlSegment(content.file) === getLastUrlSegment(summary.file)
 		),
 	}))
-	.filter(data => RegExp(search || '', 'gi').test(data.content?.rawContent()));
+	.filter(data =>
+		RegExp(search || '', 'gi').test(data.content?.rawContent() ?? '')
+	);
 ---
 
 <MainLayout title="News">
