@@ -52,3 +52,6 @@ jobs:
           prettier_plugins: "prettier-plugin-tailwindcss prettier-plugin-astro"
           prettier_options: '--config ./.prettierrc.json --write src/**/*.{astro,ts,tsx,md,mdx}'
           same_commit: True
+          
+      - name: Build astro pages
+        run: pnpm build
