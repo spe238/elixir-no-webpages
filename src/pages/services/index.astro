@@ -1,9 +1,11 @@
 ---
-import MainLayout from '../../layouts/MainLayout.astro';
+import MainLayout from '@layouts/MainLayout.astro';
 
-import '../../styles/global.css';
+import '@styles/global.css';
 
-const postsEInfra = await Astro.glob('/src/pages/services/eInfrastructures/*.md');
+const postsEInfra = await Astro.glob(
+	'/src/pages/services/eInfrastructures/*.md'
+);
 const postsTools = await Astro.glob('/src/pages/services/tools/*.md');
 const postsDataMS = await Astro.glob(
 	'/src/pages/services/dataManagementSharing/*.md'
