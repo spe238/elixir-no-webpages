@@ -16,7 +16,6 @@ const Searchbar: React.FC = () => {
 
 	const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setInputString(e.target.value);
-		console.log(inputString);
 	};
 
 	const handleKeyDown = (e: KeyboardEvent) => {
