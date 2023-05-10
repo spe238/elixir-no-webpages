@@ -56,7 +56,7 @@ const Searchbar: React.FC = () => {
 						type="text"
 						placeholder="Search"
 						autoFocus
-						className="z-20 rounded-full p-2 focus:outline-none"
+						className="z-20 rounded-full p-2 transition"
 						onChange={handleOnChange}
 						onKeyDown={handleKeyDown}
 					/>
