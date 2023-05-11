@@ -1,15 +1,38 @@
 ---
 import MainLayout from '@layouts/MainLayout.astro';
+import { getLastUrlSegment } from '@utils/url';
+import { searchQueryString } from 'src/globalVariables';
 
-const news = await Astro.glob('/src/pages/news/summaries/*.md');
+const search = Astro.url.searchParams.get(searchQueryString);
+const summaries = await Astro.glob('/src/pages/news/summaries/*.md');
+const contents = await Astro.glob('/src/pages/news/contents/*.md');
+const news = summaries
+	.map(summary => ({
+		summary,
+		content: contents.find(
+			content =>
+				getLastUrlSegment(content.file) === getLastUrlSegment(summary.file)
+		),
+	}))
+	.filter(data =>
+		RegExp(search || '', 'gi').test(data.content?.rawContent() ?? '')
+	);
 ---
 
 <MainLayout title="News">
 	<div class="flex flex-col">
 		{
-			news.map(content => (
-				<article class="mb-5 mt-5" set:html={content.compiledContent()} />
+			news.map(data => (
+				<article class="mb-5 mt-5" set:html={data.summary.compiledContent()} />
 			))
+		}
+		{
+			news.length === 0 && (
+				<article
+					class="mb-5 mt-5 flex justify-center text-4xl text-gray-500"
+					set:html="No result found!"
+				/>
+			)
 		}
 	</div>
 </MainLayout>

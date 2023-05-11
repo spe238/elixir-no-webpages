@@ -1,7 +1,7 @@
 ---
 import '@styles/global.css';
 import TopNavMenu from '@components/topNavMenu/TopNavMenu.astro';
-import Footer from '../components/Footer.astro';
+import Footer from '@components/Footer.astro';
 import LeftMenu from '@components/LeftMenu.astro';
 import type { LeftMenuProps } from 'src/types';
 const { menuName, menuItems } = Astro.props as LeftMenuProps;
@@ -20,9 +20,7 @@ const { menuName, menuItems } = Astro.props as LeftMenuProps;
 	</div>
 	<div class="grid grid-cols-[2fr_8fr_2fr]">
 		<LeftMenu menuName={menuName} menuItems={menuItems} />
-		<div>
-			<slot />
-		</div>
+		<div class="main-content mb-5 mt-5"><slot /></div>
 		<div></div>
 	</div>
 	<div class="bg-gray-800">
