@@ -17,7 +17,7 @@ const { menuName, menuItems } = Astro.props as LeftMenuProps;
 						{item.subItems && (
               				<ul class="ml-0">
                 				{item.subItems.map(subItem => (
-                  					<li class="m-1 p-1 text-center font-normal hover:m-1 hover:rounded-md hover:bg-elixir-orange/80 hover:text-white">
+                  					<li class="m-1 p-1 text-center font-normal hover:m-1 hover:rounded-md hover:bg-elixir-orange/80 hover:text-white hover:font-bold">
                     					<a href={subItem.link}>{subItem.label}</a>
                   					</li>
                 				))}
