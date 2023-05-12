@@ -5,19 +5,19 @@ const { menuName, menuItems } = Astro.props as LeftMenuProps;
 
 <div
 	class="m-8 flex h-fit min-w-fit flex-col rounded-lg bg-white drop-shadow-md">
-	<p class="rounded-t-lg bg-elixir-blue text-center text-lg text-white">
+	<p class="rounded-t-lg bg-elixir-grey text-center text-lg text-white">
 		{menuName}
 	</p>
 	<div class="flex h-fit flex-col">
 		{
 			menuItems && menuItems.map(item => (
 				<ol>
-					<li class="m-1 p-1 text-center font-bold hover:m-1 hover:rounded-md hover:bg-elixir-grey/80 hover:text-white">
+					<li class="m-1 p-1 text-center font-bold hover:m-1 hover:rounded-md hover:bg-elixir-grey/20">
 						<a href={item.link}>{item.label}</a>
 						{item.subItems && (
               				<ul class="ml-0">
                 				{item.subItems.map(subItem => (
-                  					<li class="m-1 p-1 text-center font-normal hover:m-1 hover:rounded-md hover:bg-elixir-orange/80 hover:text-white hover:font-bold">
+                  					<li class="m-1 p-1 text-center font-normal hover:m-1 hover:rounded-md hover:bg-elixir-orange hover:text-white hover:font-bold">
                     					<a href={subItem.link}>{subItem.label}</a>
                   					</li>
                 				))}
