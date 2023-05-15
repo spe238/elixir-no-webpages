@@ -50,7 +50,7 @@ const Searchbar: React.FC = () => {
 			</button>
 			{isOpen && (
 				<form
-					className="absolute flex h-fit w-fit -translate-x-[8.6rem] -translate-y-10 flex-row 
+					className="absolute flex h-fit w-fit -translate-x-[12.5rem] -translate-y-10 flex-row
 				rounded-full border-[1px] border-neutral-300 bg-white shadow-md transition">
 					<input
 						type="text"
