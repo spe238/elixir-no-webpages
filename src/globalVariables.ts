@@ -17,7 +17,7 @@ export const uioLogoWhite = `${globalHomeRoute}/img/logos/UiO_eng_red_center.png
 export const frLogoWhite = `${globalHomeRoute}/img/logos/FR_eng_white_center.png`;
 export const elixirNOLogoWhite = `${globalHomeRoute}/img/logos/elixirNorway_eng_white_center.png`;
 export const elixirNOLogoWhiteSvg = `${globalHomeRoute}/img/logos/elixir-no-logo-white.svg`;
-export const elixirNOBlack = `${globalHomeRoute}/img/logos/ELIXIR-NO.svg`
+export const elixirNOBlack = `${globalHomeRoute}/img/logos/ELIXIR-NO.svg`;
 
 // Name link relation
 export const dictNodes = [
