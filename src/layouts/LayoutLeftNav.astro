@@ -8,11 +8,10 @@ const { menuName, menuItems } = Astro.props as LeftMenuProps;
 ---
 
 <div class="grid h-full grid-rows-[auto_minmax(500px,1fr)_2fr_200px]">
+	<TopNavMenu />
 	<div class="sticky top-0 z-10 grid grid-cols-[1fr_10fr_1fr] bg-gray-900/90">
 		<div></div>
-		<div>
-			<TopNavMenu />
-		</div>
+		<div></div>
 		<div></div>
 	</div>
 	<div class="grid grid-cols-3 bg-gray-600">

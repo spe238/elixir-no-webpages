@@ -1,5 +1,6 @@
 ---
 import MainLayout from '@layouts/MainLayout.astro';
+/*
 import { getLastUrlSegment } from '@utils/url';
 import { searchQueryString } from 'src/globalVariables';
 
@@ -17,8 +18,15 @@ const news = summaries
 	.filter(data =>
 		RegExp(search || '', 'gi').test(data.content?.rawContent() ?? '')
 	);
+
+*/
 ---
 
+<MainLayout title="news">
+	<div>Commented out component</div>
+</MainLayout>
+{
+	/*
 <MainLayout title="News">
 	<div class="flex flex-col">
 		{
@@ -36,3 +44,5 @@ const news = summaries
 		}
 	</div>
 </MainLayout>
+*/
+}

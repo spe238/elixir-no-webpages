@@ -9,5 +9,4 @@ export default defineConfig({
 	integrations: [tailwind(), react()],
 	site: 'https://ELIXIR-NO.github.io',
 	base: globalHomeRoute,
-	output: 'server',
 });
