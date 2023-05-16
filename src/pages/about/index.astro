@@ -1,8 +1,95 @@
 ---
-import AboutLayout from '@layouts/AboutLayout.astro';
-import { Content as AboutContents } from 'src/content/about/index.md'
+import '@styles/global.css';
+import TopNavMenu from '@components/topNavMenu/TopNavMenu.astro';
+import Footer from '@components/Footer.astro';
+import LeftMenu from '@components/LeftMenu.astro';
+
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
 ---
 
-<AboutLayout title="About ELIXIR Norway">
-	<AboutContents />
-</AboutLayout>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{`Elixir Norway ${title || ''}`}</title>
+	</head>
+	<body>
+		<div class="grid h-full grid-rows-[120px_auto_auto_200px]">
+            <div>
+                <TopNavMenu />
+            </div>
+			<div class="grid grid-cols-[1fr_10fr_1fr] bg-gray-900/80 mt-150 pt-10 pb-10 text-white">
+				<div></div>
+                <div class="grid grid-cols-[3fr_1fr] items-center gap-5">
+                    <div>
+                        <h1 class="xl:text-6xl md:text-4xl sm:text-2xl pb-5">ELIXIR-NO</h1>
+                        <p class="xl:text-4xl md:text-2xl sm:text-xl font-bold">
+                            A collaboration between five universities across Norway.
+                        </p>
+                    </div>
+                    <div class="place-items-center"><img class="place-items-center" src="img/about/map-norway-white.svg"></div>
+                </div>
+                <div></div>
+			</div>
+			<div class="grid grid-cols-[1fr_10fr_1fr] pt-10">
+				<div></div>
+				<div class="grid auto-rows-auto pt-10 pb-10 text-xl gap-10">
+                    <div>
+                        <h2>Part of ELIXIR Europe</h2>
+                        <p class="pt-5">
+                            <span class="font-bold">ELIXIR Norway</span> is part of <a href="https://www.elixir-europe.org/" class ="link font-bold text-elixir-blue hover:text-elixir-orange">ELIXIR Europe</a>, a pan-European organisation that brings together experts and resources to build a sustainable infrastructure for biological data management and analysis. ELIXIR Europe connects researchers across 23 member countries, fostering collaboration, knowledge sharing, and technological advancement.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-[1fr_2fr] pt-10 pb-10 items-center gap-5">
+                        <div>
+                            <h2>Our Nodes</h2>
+                            <p class="pt-5 pr-10">
+                                <span class="font-bold">ELIXIR Norway</span> is coordinated from the University of Bergen, and we maintain strong partnerships at our nodes across Norway:
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-5 gap-5 place-items-center">
+                            <div><a href="https://elixir.no/about/organisation/bergen"><img src="img/about/UiB.svg"></a></div>
+                            <div><a href="https://elixir.no/about/organisation/oslo"><img src="img/about/UiO.svg"></a></div>
+                            <div><a href="https://elixir.no/about/organisation/tromsoe"><img src="img/about/UiT.svg"></a></div>
+                            <div><a href="https://elixir.no/about/organisation/trondheim"><img src="img/about/NTNU.svg"></a></div>
+                            <div><a href="https://elixir.no/about/organisation/aas"><img src="img/about/NMBU.svg"></a></div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-[1fr_2fr] items-center pt-10 pb-10">
+                        <div>
+                            <h2>ELIXIR Norway provides</h1>
+                            <ul class="list-inside list-disc text-elixir-orange pt-5">
+                                <li><a class="text-elixir-blue hover:text-elixir-orange" href="https://elixir.no/helpdesk">Data Helpdesk: support for researchers</a></li>
+                                <li><a class="text-elixir-blue hover:text-elixir-orange" href="https://nels.biodata.no">Data Infrastructure: storage and sharing</a></li>
+                                <li><a class="text-elixir-blue hover:text-elixir-orange" href="https://usegalaxy.no">Data analysis pipelines</a></li>
+                                <li><a class="text-elixir-blue hover:text-elixir-orange" href="https://elixir.no/training">Training</a></li>
+                            </ul>
+                        </div>
+						<div class="place-items-center pl-48 pr-48"><img class="place-items-center" src="img/about/overview.svg"></div>
+                    </div>
+                    <div class="pt-10 pb-10">
+						<h2>Coordinators</h2>
+						<div class="grid grid-cols-6 gap-5 place-items-center text-center pt-5 pb-5">
+                            <div><a class="text-elixir-blue hover:text-elixir-orange" href="https://www.uib.no/en/persons/Sushma.Grellscheid">Head of Node: <br />Sushma Grellscheid</a></div>
+							<div><a class="text-elixir-blue hover:text-elixir-orange" href="https://www.uib.no/en/persons/Korbinian.Michael.B%C3%B6sl">Data Management Coordinator: <br />Korbinian Bösl</a></div>
+							<div><a class="text-elixir-blue hover:text-elixir-orange" href="https://www.uib.no/en/persons/Sushma.Grellscheid">Node Coordinator:<br /></a></div>
+							<div><a class="text-elixir-blue hover:text-elixir-orange" href="https://uit.no/ansatte/espen.aberg">Service Coordinator: <br />Espen Åberg</a></div>
+							<div><a class="text-elixir-blue hover:text-elixir-orange" href="https://www.uib.no/personer/Kjell.Petersen">Technical Coordinator: <br />Kjell Petersen</a></div>
+							<div><a class="text-elixir-blue hover:text-elixir-orange" href="https://uit.no/ansatte/erin.calhoun">Training Coordinator: <br />Erin Calhoun</a></div>
+                        </div>
+					</div>
+                </div>
+				<div></div>
+			</div>
+			<div class="bg-gray-800 align-bottom">
+				<Footer />
+			</div>
+		</div>
+	</body>
+</html>
