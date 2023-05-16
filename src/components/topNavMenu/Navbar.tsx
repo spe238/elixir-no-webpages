@@ -20,13 +20,13 @@ const Navbar: React.FC = () => {
 			</a>
 			<div className="h-[25px] w-[2px] rounded-full bg-neutral-300"></div>
 			<a
-				href={`${globalHomeRoute}/News`}
+				href={`${globalHomeRoute}/news`}
 				className="cursor-pointer rounded-full p-3 transition hover:bg-gray-200">
 				News
 			</a>
 			<div className="h-[25px] w-[2px] rounded-full bg-neutral-300"></div>
 			<a
-				href={`${globalHomeRoute}/Events`}
+				href={`${globalHomeRoute}/events`}
 				className="cursor-pointer rounded-full p-3 transition hover:bg-gray-200">
 				Events
 			</a>
