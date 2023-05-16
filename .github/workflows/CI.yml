@@ -43,8 +43,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Install dependencies
-        run: pnpm install
+      - name: Install dependencies and check
+        run: |
+          pnpm install
+          pnpm check-build
 
       - name: Prettify code
         uses: creyD/prettier_action@v4.3
@@ -52,7 +54,3 @@ jobs:
           prettier_plugins: 'prettier-plugin-tailwindcss prettier-plugin-astro'
           prettier_options: '--config ./.prettierrc.json --write src/**/*.{astro,ts,tsx,md,mdx}'
           same_commit: True
-
-      - name: Run pnpm check and script
-        run: |
-          pnpm check-build
