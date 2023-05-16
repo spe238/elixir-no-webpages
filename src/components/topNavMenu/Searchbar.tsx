@@ -44,7 +44,7 @@ const Searchbar: React.FC = () => {
 		<div ref={ref}>
 			<button
 				onClick={handleClick}
-				className="z-50 rounded-full bg-elixir-orange  p-2 px-3 text-white
+				className="z-20 rounded-full bg-elixir-orange  p-2 px-3 text-white
 					 transition hover:bg-orange-600">
 				<FontAwesomeIcon icon={faMagnifyingGlass} />
 			</button>
@@ -56,7 +56,7 @@ const Searchbar: React.FC = () => {
 						type="text"
 						placeholder="Search"
 						autoFocus
-						className="z-20 rounded-full p-2 transition"
+						className="z-10 rounded-full p-2 transition"
 						onChange={handleOnChange}
 						onKeyDown={handleKeyDown}
 					/>
