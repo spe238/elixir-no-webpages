@@ -1,5 +1,4 @@
 import { globalHomeRoute } from 'src/globalVariables';
-import Searchbar from './Searchbar';
 
 const Navbar: React.FC = () => {
 	return (
@@ -36,7 +35,6 @@ const Navbar: React.FC = () => {
 				className="cursor-pointer rounded-full p-3 transition hover:bg-gray-200">
 				Services
 			</a>
-			<Searchbar />
 		</div>
 	);
 };
