@@ -1,16 +1,21 @@
 ---
-import NavMenu from './NavMenu';
-import Searchbar from './Searchbar';
-import { elixirNOLogoWhiteSvg } from 'src/globalVariables';
+import { elixirNOBlack } from 'src/globalVariables';
+import Navbar from './Navbar';
+import HamburgerMenu from './HamburgerMenu';
+import { globalHomeRoute } from 'src/globalVariables';
 ---
 
-<div class="flex flex-row flex-wrap items-center justify-between py-5">
-	<img
-		src={elixirNOLogoWhiteSvg}
-		alt="ELIXIR Norway LOGO"
-		height={150}
-		width={150}
-	/>
-	<NavMenu client:load />
-	<Searchbar client:load />
+<div
+	class="fixed z-10 flex w-full flex-row items-center justify-between bg-white p-6 shadow-md lg:px-32">
+	<a href={`${globalHomeRoute}/`}>
+		<img
+			src={elixirNOBlack}
+			alt="Elixir Logo"
+			height="70"
+			width="70"
+			class="cursor-pointer"
+		/>
+	</a>
+	<Navbar client:load />
+	<HamburgerMenu client:load />
 </div>

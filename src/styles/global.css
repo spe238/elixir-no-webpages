@@ -69,6 +69,10 @@ button {
 	background-color: unset;
 }
 
+button:hover {
+	cursor: pointer;
+}
+
 #root,
 #__next {
 	isolation: isolate;
@@ -77,4 +81,8 @@ button {
 /* Apply any global styles below */
 html {
 	@apply bg-slate-200;
+}
+
+.main-content * a {
+	@apply text-elixir-blue;
 }

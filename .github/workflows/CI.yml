@@ -7,7 +7,7 @@ on:
       - main
 
 jobs:
-  cache-install-format:
+  cache-install-format-check:
     runs-on: ubuntu-latest
 
     steps:
@@ -43,12 +43,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Install dependencies
-        run: pnpm install
+      - name: Install dependencies and check
+        run: |
+          pnpm install
+          pnpm build
 
       - name: Prettify code
         uses: creyD/prettier_action@v4.3
         with:
-          prettier_plugins: "prettier-plugin-tailwindcss prettier-plugin-astro"
+          prettier_plugins: 'prettier-plugin-tailwindcss prettier-plugin-astro'
           prettier_options: '--config ./.prettierrc.json --write src/**/*.{astro,ts,tsx,md,mdx}'
           same_commit: True
