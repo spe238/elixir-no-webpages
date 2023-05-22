@@ -1,12 +1,12 @@
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import useSearchbarStore from '@utils/useSearchbarStore';
+import useSearchStore from '@utils/useSearchStore';
 import { useCallback, useEffect, useRef, useState, KeyboardEvent } from 'react';
 
 const Searchbar: React.FC = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [inputString, setInputString] = useState('');
-	const useSearchbar = useSearchbarStore();
+	const useSearchbar = useSearchStore();
 
 	const ref = useRef<HTMLDivElement>(null);
 
@@ -23,6 +23,7 @@ const Searchbar: React.FC = () => {
 			e.preventDefault();
 			useSearchbar.setSearchString(inputString);
 			setIsOpen(false);
+			useSearchbar.setOpenModal(true);
 		}
 	};
 
