@@ -1,5 +1,5 @@
 ---
-layout: src/layouts/MainLayout.astro
+layout: src/layouts/DefaultLayout.astro
 ---
 
 <base target="_blank">
@@ -8,7 +8,7 @@ layout: src/layouts/MainLayout.astro
 
 Be ready to receive funding! Why is Open Data and Data Management important for my application?
 
-<img src="https://elixir.no/uploads/DMP_planning.png" width="300px"/>
+<img src="https://elixir.no/uploads/DMP_planning.png" alt="DMP logo' width="300px"/>
 
 This webinar on the 31th of January (13.00 CET) from [ELIXIR Norway](https://elixir.no) will provide you with information on Open Data and Data Management requirements for research applications to the Research Council of Norway (RCN) call for proposals with deadline February 8th.
 
