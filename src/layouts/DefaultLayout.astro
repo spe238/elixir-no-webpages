@@ -20,24 +20,20 @@ const { title } = Astro.props;
 		<title>{`Elixir Norway ${title}`}</title>
 	</head>
 	<body>
-		<div class="grid h-full grid-rows-[auto_minmax(500px,1fr)_2fr_200px]">
-			<TopNavMenu />
-			<div class="sticky top-0 grid grid-cols-[1fr_10fr_1fr] bg-gray-900/90">
-				<div></div>
-				<div></div>
-				<div></div>
-			</div>
-			<div class="grid grid-cols-3 bg-gray-800">
-				<!-- todo: Carousel component comes here -->
-			</div>
-			<div class="grid grid-cols-[1fr_10fr_1fr]">
-				<div></div>
-				<div class="main-content mb-5 mt-5"><slot /></div>
-				<div></div>
-			</div>
-			<div class="bg-gray-800 align-bottom">
-				<Footer />
+		<TopNavMenu />
+		<div class="max-xl mx-auto mt-40 px-10">
+			<div class="flex flex-col lg:grid lg:grid-cols-[2fr_5fr_2fr]">
+				<div>
+					<slot name="left-bar" />
+				</div>
+				<div>
+					<slot name="content" />
+				</div>
+				<div>
+					<slot name="right-bar" />
+				</div>
 			</div>
 		</div>
+		<Footer />
 	</body>
 </html>

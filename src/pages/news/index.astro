@@ -1,5 +1,5 @@
 ---
-import MainLayout from '@layouts/MainLayout.astro';
+import DefaultLayout from '@layouts/DefaultLayout.astro';
 /*
 import { getLastUrlSegment } from '@utils/url';
 import { searchQueryString } from 'src/globalVariables';
@@ -22,9 +22,9 @@ const news = summaries
 */
 ---
 
-<MainLayout title="news">
-	<div>Commented out component</div>
-</MainLayout>
+<DefaultLayout title="news">
+	<div slot="content">Commented out component</div>
+</DefaultLayout>
 {
 	/*
 <MainLayout title="News">

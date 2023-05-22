@@ -30,6 +30,12 @@ const Navbar: React.FC = () => {
 				className="cursor-pointer rounded-full p-3 transition hover:bg-gray-200">
 				Events
 			</a>
+			<div className="h-[25px] w-[2px] rounded-full bg-neutral-300"></div>
+			<a
+				href={`${globalHomeRoute}/services`}
+				className="cursor-pointer rounded-full p-3 transition hover:bg-gray-200">
+				Services
+			</a>
 			<Searchbar />
 		</div>
 	);
