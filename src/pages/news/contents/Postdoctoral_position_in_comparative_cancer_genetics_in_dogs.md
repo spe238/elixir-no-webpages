@@ -1,5 +1,5 @@
 ---
-layout: src/layouts/MainLayout.astro
+layout: src/layouts/DefaultLayout.astro
 ---
 
 ## Postdoctoral position in comparative cancer genetics in dogs
