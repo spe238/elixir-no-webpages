@@ -31,9 +31,13 @@ const SearchModal: React.FC<SearchModalProps> = ({ mdData }) => {
 	>([]);
 	const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		searchStore.setSearchString(e.target.value);
-		const results = mdData.filter(file =>
-			file.file.includes(searchStore.searchValue)
-		);
+		const escapedSearchString = searchStore.searchValue
+			.trim()
+			.replace(/\s/g, '')
+			.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+		const pattern = `\\b${escapedSearchString}|${escapedSearchString}\\b|${escapedSearchString}`;
+		const regex = new RegExp(pattern, 'i');
+		const results = mdData.filter(file => regex.test(file.file));
 		setResultArray(results);
 	};
 
@@ -106,9 +110,11 @@ interface ResultCardProp {
 	file: MarkdownInstance<Record<string, any>>;
 }
 const ResultCard: React.FC<ResultCardProp> = ({ file }) => {
+	const url = file.url;
+	const title = file.frontmatter.title ?? '';
 	return (
-		<a href={file.url} className="rounded-lg drop-shadow-md">
-			{file.file}
-		</a>
+		<div className="my-4 w-full rounded-lg bg-white p-2 shadow-md ring-1">
+			<a href={url}>{title}</a>
+		</div>
 	);
 };
