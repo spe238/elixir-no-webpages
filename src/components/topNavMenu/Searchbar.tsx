@@ -1,12 +1,12 @@
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import useSearchbarStore from '@utils/useSearchbarStore';
+import useSearchStore from '@utils/useSearchStore';
 import { useCallback, useEffect, useRef, useState, KeyboardEvent } from 'react';
 
 const Searchbar: React.FC = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [inputString, setInputString] = useState('');
-	const useSearchbar = useSearchbarStore();
+	const useSearchbar = useSearchStore();
 
 	const ref = useRef<HTMLDivElement>(null);
 
@@ -23,6 +23,7 @@ const Searchbar: React.FC = () => {
 			e.preventDefault();
 			useSearchbar.setSearchString(inputString);
 			setIsOpen(false);
+			useSearchbar.setOpenModal(true);
 		}
 	};
 
@@ -44,7 +45,7 @@ const Searchbar: React.FC = () => {
 		<div ref={ref}>
 			<button
 				onClick={handleClick}
-				className="z-50 rounded-full bg-elixir-orange  p-2 px-3 text-white
+				className="z-20 rounded-full bg-elixir-orange  p-2 px-3 text-white
 					 transition hover:bg-orange-600">
 				<FontAwesomeIcon icon={faMagnifyingGlass} />
 			</button>
@@ -56,7 +57,7 @@ const Searchbar: React.FC = () => {
 						type="text"
 						placeholder="Search"
 						autoFocus
-						className="z-20 rounded-full p-2 transition"
+						className="z-10 rounded-full p-2 transition"
 						onChange={handleOnChange}
 						onKeyDown={handleKeyDown}
 					/>
