@@ -1,8 +1,8 @@
 import type { MarkdownInstance } from 'astro';
 import useSearchStore from '@utils/useSearchStore';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { HiMagnifyingGlassCircle } from 'react-icons/hi2';
-import { RxCross2 } from 'react-icons/rx';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 interface SearchModalProps {
 	mdData: MarkdownInstance<Record<string, any>>[];
@@ -70,9 +70,13 @@ const SearchModal: React.FC<SearchModalProps> = ({ mdData }) => {
 							rounded-t p-6">
 								<button
 									onClick={handleClose}
-									className="left-9 rounded-full border-0 bg-elixir-orange px-2 py-2 text-white transition
+									className="left-9 rounded-full border-0 bg-elixir-orange px-2 py-1 text-white transition
 									hover:opacity-70">
-									<RxCross2 />
+									<FontAwesomeIcon
+										icon={faXmark}
+										size="xl"
+										className="text-white"
+									/>
 								</button>
 								<div className="text-lg">
 									<input
@@ -83,9 +87,10 @@ const SearchModal: React.FC<SearchModalProps> = ({ mdData }) => {
 										onChange={handleOnChange}
 									/>
 								</div>
-								<HiMagnifyingGlassCircle
-									size={42}
-									className="text-elixir-orange"
+								<FontAwesomeIcon
+									icon={faMagnifyingGlass}
+									className="rounded-full bg-elixir-orange p-2 text-white"
+									size="lg"
 								/>
 							</div>
 							{/* Body */}
