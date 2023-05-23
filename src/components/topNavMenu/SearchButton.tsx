@@ -1,5 +1,6 @@
 import useSearchStore from '@utils/useSearchStore';
-import { HiMagnifyingGlassCircle } from 'react-icons/hi2';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const SearchButton: React.FC = () => {
 	const openSearchModal = useSearchStore().setOpenModal;
@@ -9,7 +10,11 @@ const SearchButton: React.FC = () => {
 
 	return (
 		<button onClick={handleOnClick}>
-			<HiMagnifyingGlassCircle size={52} className="text-elixir-orange" />
+			<FontAwesomeIcon
+				icon={faMagnifyingGlass}
+				className="rounded-full bg-elixir-orange p-2 text-white"
+				size="lg"
+			/>
 		</button>
 	);
 };
