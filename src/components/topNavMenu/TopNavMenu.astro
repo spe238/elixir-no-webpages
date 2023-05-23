@@ -1,8 +1,10 @@
 ---
 import { elixirNOBlack } from 'src/globalVariables';
 import Navbar from './Navbar';
-import HamburgerMenu from './HamburgerMenu';
+import SearchButton from './SearchButton';
 import { globalHomeRoute } from 'src/globalVariables';
+import SearchModal from '@components/modals/SearchModal';
+const mdFiles = await Astro.glob('../../pages/**/*.md');
 ---
 
 <div
@@ -17,5 +19,6 @@ import { globalHomeRoute } from 'src/globalVariables';
 		/>
 	</a>
 	<Navbar client:load />
-	<HamburgerMenu client:load />
+	<SearchButton client:load />
+	<SearchModal mdData={mdFiles} client:load />
 </div>
