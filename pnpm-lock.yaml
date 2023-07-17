@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@astrojs/react':
     specifier: ^2.1.2
@@ -76,8 +80,8 @@ devDependencies:
     specifier: ^0.8.0
     version: 0.8.0
   prettier-plugin-tailwindcss:
-    specifier: ^0.2.7
-    version: 0.2.7(prettier-plugin-astro@0.8.0)(prettier@2.8.8)
+    specifier: ^0.4.1
+    version: 0.4.1(prettier-plugin-astro@0.8.0)(prettier@2.8.8)
 
 packages:
 
@@ -3715,21 +3719,21 @@ packages:
       synckit: 0.8.5
     dev: true
 
-  /prettier-plugin-tailwindcss@0.2.7(prettier-plugin-astro@0.8.0)(prettier@2.8.8):
-    resolution: {integrity: sha512-jQopIOgjLpX+y8HeD56XZw7onupRTC0cw7eKKUimI7vhjkPF5/1ltW5LyqaPtSyc8HvEpvNZsvvsGFa2qpa59w==}
+  /prettier-plugin-tailwindcss@0.4.1(prettier-plugin-astro@0.8.0)(prettier@2.8.8):
+    resolution: {integrity: sha512-hwn2EiJmv8M+AW4YDkbjJ6HlZCTzLyz1QlySn9sMuKV/Px0fjwldlB7tol8GzdgqtkdPtzT3iJ4UzdnYXP25Ag==}
     engines: {node: '>=12.17.0'}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '*'
-      '@prettier/plugin-php': '*'
       '@prettier/plugin-pug': '*'
       '@shopify/prettier-plugin-liquid': '*'
       '@shufo/prettier-plugin-blade': '*'
       '@trivago/prettier-plugin-sort-imports': '*'
-      prettier: '>=2.2.0'
+      prettier: ^2.2 || ^3.0
       prettier-plugin-astro: '*'
       prettier-plugin-css-order: '*'
       prettier-plugin-import-sort: '*'
       prettier-plugin-jsdoc: '*'
+      prettier-plugin-marko: '*'
       prettier-plugin-organize-attributes: '*'
       prettier-plugin-organize-imports: '*'
       prettier-plugin-style-order: '*'
@@ -3737,8 +3741,6 @@ packages:
       prettier-plugin-twig-melody: '*'
     peerDependenciesMeta:
       '@ianvs/prettier-plugin-sort-imports':
-        optional: true
-      '@prettier/plugin-php':
         optional: true
       '@prettier/plugin-pug':
         optional: true
@@ -3755,6 +3757,8 @@ packages:
       prettier-plugin-import-sort:
         optional: true
       prettier-plugin-jsdoc:
+        optional: true
+      prettier-plugin-marko:
         optional: true
       prettier-plugin-organize-attributes:
         optional: true
