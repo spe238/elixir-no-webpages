@@ -1,164 +1,159 @@
-import * as React from "react";
-import { cn } from "../../../../elixir-no-astro3/src/lib/utils";
+import * as React from 'react';
+import { cn } from '@/lib/utils';
 import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@components/ui/navigation-menu";
+	NavigationMenu,
+	NavigationMenuContent,
+	NavigationMenuItem,
+	NavigationMenuLink,
+	NavigationMenuList,
+	NavigationMenuTrigger,
+} from '@/components/ui/navigation-menu';
 
 type NavItems = {
-  title: string;
-  href: string;
-  description: string;
+	title: string;
+	href: string;
+	description: string;
 };
 
 const projects: NavItems[] = [
-  {
-    title: "BioMedData",
-    href: "/projects/bio-med-data",
-    description:
-      "Research infrastructure to promote FAIR data management within life sciences",
-  },
-  {
-    title: "EU Projects",
-    href: "/projects/eu-projects",
-    description: "Elixir-converge, B1MG and EOSC-Life",
-  },
-  {
-    title: "NeIC",
-    href: "/projects/neic",
-    description: "Nordic collaboration on sensitive data",
-  },
-  {
-    title: "GBC",
-    href: "/projects/gbc",
-    description: "Global Biodata Coalition",
-  },
+	{
+		title: 'BioMedData',
+		href: '/projects/bio-med-data',
+		description:
+			'Research infrastructure to promote FAIR data management within life sciences',
+	},
+	{
+		title: 'EU Projects',
+		href: '/projects/eu-projects',
+		description: 'Elixir-converge, B1MG and EOSC-Life',
+	},
+	{
+		title: 'NeIC',
+		href: '/projects/neic',
+		description: 'Nordic collaboration on sensitive data',
+	},
+	{
+		title: 'GBC',
+		href: '/projects/gbc',
+		description: 'Global Biodata Coalition',
+	},
 ];
 
 const services: NavItems[] = [
-  {
-    title: "Helpdesk",
-    href: "/services/helpdesk",
-    description: "Support for bioinformatics and data management",
-  },
-  {
-    title: "Tools",
-    href: "/services/tools",
-    description:
-      "Infrastructure and software for workflows, databases and storage for life science data",
-  },
-  {
-    title: "Training",
-    href: "/services/training",
-    description:
-      "Courses and workshops in informatics and data management for life sciences",
-  },
+	{
+		title: 'Helpdesk',
+		href: '/services/helpdesk',
+		description: 'Support for bioinformatics and data management',
+	},
+	{
+		title: 'Tools',
+		href: '/services/tools',
+		description:
+			'Infrastructure and software for workflows, databases and storage for life science data',
+	},
+	{
+		title: 'Training',
+		href: '/services/training',
+		description:
+			'Courses and workshops in informatics and data management for life sciences',
+	},
 ];
 const navLinkClasses: string =
-  "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground";
+	'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground';
 export function NavbarWide() {
-  return (
-    <div className="mx-auto grid max-w-[1600px] grid-cols-[1fr_auto_1fr] place-content-center px-6 py-3">
-      <a href="/">
-        <img
-          src="/images/logos/elixir-no-logo-white.svg"
-          alt="Elixir Norway Logo"
-          width="80px"
-        />
-      </a>
-      <NavigationMenu>
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>
-              <a href="/organisation">Organisation</a>
-            </NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="flex max-w-fit flex-col gap-3 p-3">
-                <NavigationMenuLink
-                  href="/organisation#bergen"
-                  className={navLinkClasses}
-                >
-                  Bergen
-                </NavigationMenuLink>
-                <NavigationMenuLink
-                  href="/organisation#oslo"
-                  className={navLinkClasses}
-                >
-                  oslo
-                </NavigationMenuLink>
-                <NavigationMenuLink
-                  href="/organisation#Tromsoe"
-                  className={navLinkClasses}
-                >
-                  Tromsø
-                </NavigationMenuLink>
-                <NavigationMenuLink
-                  href="/organisation#Trondheim"
-                  className={navLinkClasses}
-                >
-                  Trondheim
-                </NavigationMenuLink>
-                <NavigationMenuLink
-                  href="/organisation#aas"
-                  className={navLinkClasses}
-                >
-                  Ås
-                </NavigationMenuLink>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Projects</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="lg:grid-col-[.75fr_1fr] grid gap-3 p-6 md:w-[400px] lg:w-[500px]">
-                {projects.map((it) => (
-                  <ListItem href={it.href} title={it.title} key={it.title}>
-                    {it.description}
-                  </ListItem>
-                ))}
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="lg:grid-col-[.75fr_1fr] grid gap-3 p-6 md:w-[400px] lg:w-[500px]">
-                {services.map((it) => (
-                  <ListItem href={it.href} title={it.title} key={it.title}>
-                    {it.description}
-                  </ListItem>
-                ))}
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuLink href="/news">News</NavigationMenuLink>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
-    </div>
-  );
+	return (
+		<div className="mx-auto grid max-w-[1600px] grid-cols-[1fr_auto_1fr] place-content-center px-6 py-3">
+			<a href="/">
+				<img
+					src="/images/logos/elixir-no-logo-white.svg"
+					alt="Elixir Norway Logo"
+					width="80px"
+				/>
+			</a>
+			<NavigationMenu>
+				<NavigationMenuList>
+					<NavigationMenuItem>
+						<NavigationMenuTrigger>
+							<a href="/organisation">Organisation</a>
+						</NavigationMenuTrigger>
+						<NavigationMenuContent>
+							<ul className="flex max-w-fit flex-col gap-3 p-3">
+								<NavigationMenuLink
+									href="/organisation#bergen"
+									className={navLinkClasses}>
+									Bergen
+								</NavigationMenuLink>
+								<NavigationMenuLink
+									href="/organisation#oslo"
+									className={navLinkClasses}>
+									oslo
+								</NavigationMenuLink>
+								<NavigationMenuLink
+									href="/organisation#Tromsoe"
+									className={navLinkClasses}>
+									Tromsø
+								</NavigationMenuLink>
+								<NavigationMenuLink
+									href="/organisation#Trondheim"
+									className={navLinkClasses}>
+									Trondheim
+								</NavigationMenuLink>
+								<NavigationMenuLink
+									href="/organisation#aas"
+									className={navLinkClasses}>
+									Ås
+								</NavigationMenuLink>
+							</ul>
+						</NavigationMenuContent>
+					</NavigationMenuItem>
+					<NavigationMenuItem>
+						<NavigationMenuTrigger>Projects</NavigationMenuTrigger>
+						<NavigationMenuContent>
+							<ul className="lg:grid-col-[.75fr_1fr] grid gap-3 p-6 md:w-[400px] lg:w-[500px]">
+								{projects.map(it => (
+									<ListItem href={it.href} title={it.title} key={it.title}>
+										{it.description}
+									</ListItem>
+								))}
+							</ul>
+						</NavigationMenuContent>
+					</NavigationMenuItem>
+					<NavigationMenuItem>
+						<NavigationMenuTrigger>Services</NavigationMenuTrigger>
+						<NavigationMenuContent>
+							<ul className="lg:grid-col-[.75fr_1fr] grid gap-3 p-6 md:w-[400px] lg:w-[500px]">
+								{services.map(it => (
+									<ListItem href={it.href} title={it.title} key={it.title}>
+										{it.description}
+									</ListItem>
+								))}
+							</ul>
+						</NavigationMenuContent>
+					</NavigationMenuItem>
+					<NavigationMenuItem>
+						<NavigationMenuLink href="/news">News</NavigationMenuLink>
+					</NavigationMenuItem>
+				</NavigationMenuList>
+			</NavigationMenu>
+		</div>
+	);
 }
 
 const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
+	React.ElementRef<'a'>,
+	React.ComponentPropsWithoutRef<'a'>
 >(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a ref={ref} className={cn(navLinkClasses, className)} {...props}>
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  );
+	return (
+		<li>
+			<NavigationMenuLink asChild>
+				<a ref={ref} className={cn(navLinkClasses, className)} {...props}>
+					<div className="text-sm font-medium leading-none">{title}</div>
+					<p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+						{children}
+					</p>
+				</a>
+			</NavigationMenuLink>
+		</li>
+	);
 });
-ListItem.displayName = "ListItem";
+ListItem.displayName = 'ListItem';
