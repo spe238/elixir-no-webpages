@@ -1,163 +1,127 @@
 ---
-import '@styles/global.css';
-import '../globalVariables';
-import {
-	contactAddress,
-	dictDelivrables,
-	dictNodes,
-	elixirNOLogoWhite,
-	fkURL,
-	frLogoWhite,
-	nmbuLogoWhite,
-	nmbuURL,
-	ntnuLogoWhite,
-	uitLogoWhite,
-	ntnuURL,
-	uibLogoWhite,
-	uibURL,
-	uioLogoWhite,
-	uioURL,
-	uitURL,
-} from '../globalVariables';
-import {
-	faTwitterSquare,
-	faLinkedinIn,
-	faYoutubeSquare,
-	faFlickr,
-} from '@fortawesome/free-brands-svg-icons';
-import '@fortawesome/fontawesome-svg-core/styles.css';
-import SocialIcon from './SocialIcon.astro';
+import { Twitter, Linkedin, Youtube } from "lucide-react";
+
+import { Separator } from "./ui/separator";
 ---
 
-<footer class="max-w-[1300] border-white text-base leading-6 text-white">
-	<section class="bg-elixir-grey px-5 py-5 md:flex md:justify-between md:gap-5">
-		<div class="shrink-0 md:basis-2/6">
-			<nav>
-				<h2 class="border-b font-semibold">National nodes</h2>
-				<ul class="pt-1">
-					{
-						dictNodes.map(node => (
-							<li>
-								<a class="hover:underline" href={node.link}>
-									{' '}
-									{node.name}
-								</a>
-							</li>
-						))
-					}
-				</ul>
-			</nav>
-		</div>
-		<div class="min-w-fit shrink-0 md:basis-1/4">
-			<h2 class="border-b font-semibold">International deliverables</h2>
-			<ul class="pt-1">
-				{
-					dictDelivrables.map(node => (
-						<li>
-							<a
-								class="hover:underline"
-								href={node.link}
-								target="_blank"
-								rel="noopener">
-								{' '}
-								{node.name}
-							</a>
-						</li>
-					))
-				}
-			</ul>
-		</div>
-		<div class="shrink-0 md:basis-1/5">
-			<div>
-				<nav>
-					<a title="home" href="/">
-						<img src={elixirNOLogoWhite} alt="elixirNorway_eng_white_center" />
-					</a>
-				</nav>
-			</div>
-			<span class="mt-5 flex flex-row">
-				<SocialIcon
-					url="https://twitter.com/elixireurope"
-					title="Twitter"
-					icon={faTwitterSquare}
-				/>
-				<SocialIcon
-					url="https://www.linkedin.com/company/elixir-europe"
-					title="LinkdIn"
-					icon={faLinkedinIn}
-				/>
-				<SocialIcon
-					url="https://www.youtube.com/channel/UCvwFIw5HomylguGOGxR8B8w"
-					title="Youtube"
-					icon={faYoutubeSquare}
-				/>
-				<SocialIcon
-					url="https://www.flickr.com/photos/elixir-europe"
-					title="flickr"
-					icon={faFlickr}
-				/>
-			</span>
-		</div>
-	</section>
-	<section class="bg-elixir-blue bg-clip-padding p-4">
-		<span class="me-100 flex flex-row place-content-center space-x-4">
-			<a title="UiB" href={uibURL} target="_blank" rel="noopener">
-				<img
-					src={uibLogoWhite}
-					alt="UiBlogo_Eng_white_center"
-					width="122"
-					height="42"
-				/>
-			</a>
-			<a title="NTNU" href={ntnuURL} target="_blank" rel="noopener">
-				<img
-					src={ntnuLogoWhite}
-					alt="NTNUlogo_Eng_white_center"
-					width="187"
-					height="36"
-				/>
-			</a>
-			<a title="UiT" href={uitURL} target="_blank" rel="noopener">
-				<img
-					src={uitLogoWhite}
-					alt="UiTlogo_no_white_center"
-					width="47"
-					height="47"
-				/>
-			</a>
-			<a title="NMBU" href={nmbuURL} target="_blank" rel="noopener">
-				<img
-					src={nmbuLogoWhite}
-					alt="NMBU_eng_lightgreen_center"
-					width="134"
-					height="46"
-				/>
-			</a>
-			<a title="UiO" href={uioURL} target="_blank" rel="noopener">
-				<img
-					src={uioLogoWhite}
-					alt="UiO_Eng_red_center"
-					width="47"
-					height="47"
-				/>
-			</a>
-			<a href={fkURL} target="_blank" rel="noopener">
-				<img
-					src={frLogoWhite}
-					alt="FR_Eng_white_center"
-					width="201"
-					height="37"
-				/>
-			</a>
-		</span>
-		<address class="bg-clip-padding p-4 text-center text-2xl">
-			<a href={contactAddress}>Contact us</a>
-		</address>
-		<p class="text-center text-xs">
-			Financed by the Research Council of Norway's grants 208481, 270068,
-			295932, the University of Bergen, the University of Oslo, the Arctic
-			University of Norway in Tromsø, the Norwegian University of Science and
-			Technology and the Norwegian University of Life Sciences: NMBU
-		</p>
-	</section>
-</footer>
+<div class="absolute bottom-0 left-0 flex w-screen flex-col bg-secondary">
+  <div
+    class="mx-auto flex max-w-[1200px] flex-col flex-wrap justify-evenly gap-x-24 gap-y-6 px-6 py-10 md:flex-row"
+  >
+    <div class="flex flex-col gap-y-6">
+      <a href="/" class="flex justify-center">
+        <img
+          src="/images/logos/elixir-no-logo-white.svg"
+          alt="Elixir Norway Logo"
+          width="200"
+        />
+      </a>
+      <div class="flex flex-row items-center justify-center gap-x-6">
+        <a href="https://twitter.com/elixirnorway" target="_blank">
+          <Twitter />
+        </a>
+        <a
+          href="https://www.linkedin.com/company/elixir-europe"
+          target="_blank"
+        >
+          <Linkedin />
+        </a>
+        <a
+          href="https://www.youtube.com/channel/UCvwFIw5HomylguGOGxR8B8w"
+          target="_blank"
+        >
+          <Youtube />
+        </a>
+        <a href="https://www.flickr.com/photos/elixir-europe/" target="_blank">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+            class="w-5 fill-foreground"
+          >
+            <path
+              d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM144.5 319c-35.1 0-63.5-28.4-63.5-63.5s28.4-63.5 63.5-63.5 63.5 28.4 63.5 63.5-28.4 63.5-63.5 63.5zm159 0c-35.1 0-63.5-28.4-63.5-63.5s28.4-63.5 63.5-63.5 63.5 28.4 63.5 63.5-28.4 63.5-63.5 63.5z"
+            >
+            </path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="flex flex-col gap-y-2 pl-12 md:pl-0">
+      <div class="font-bold underline underline-offset-2">National Nodes</div>
+      <a href="/organisation#bergen">University of Bergen</a>
+      <a href="/organisation#oslo">University of Oslo</a>
+      <a href="/organisation#tromsoe">Arctic University of Norway</a>
+      <a href="/organisation#trondeim">NTNU</a>
+      <a href="/organisation#aas">NMBU</a>
+    </div>
+    <div class="flex flex-col gap-y-2 pl-12 md:pl-0">
+      <div class="font-bold underline underline-offset-2">Projects</div>
+      <a href="/projects/bio-med-data">BioMedData</a>
+      <a href="/projects/bio-med-data#ls-rdm-group">Life-Science RDM Group</a>
+      <a href="/projects/eu-projects">Elixir Europe Projects</a>
+      <a href="/projects/neic">NeIC</a>
+      <a href="/projects/gbc">GBC</a>
+    </div>
+  </div>
+  <Separator
+    className="w-1/2 bg-gradient-to-r from-secondary via-accent-foreground to-secondary mx-auto"
+  />
+  <!-- Footer Logos  -->
+  <div class="flex flex-row flex-wrap items-center justify-center gap-x-2">
+    <a href="https://uib.no/" target="_blank"
+      ><img
+        src="/images/logos/uib-logo-white.png"
+        alt="UiB logo"
+        width="75"
+      /></a
+    >
+    <a href="https://uio.no/" target="_blank"
+      ><img
+        src="/images/logos/uio-logo-white.png"
+        alt="UiO logo"
+        width="68"
+      /></a
+    >
+    <a href="https://uit.no/" target="_blank"
+      ><img
+        src="/images/logos/uit-logo-white.png"
+        alt="UiT logo"
+        width="75"
+      /></a
+    >
+    <a href="https://ntnu.no/" target="_blank"
+      ><img
+        src="/images/logos/ntnu-logo-white.png"
+        alt="UiO logo"
+        width="47"
+      /></a
+    >
+    <a href="https://nmbu.no/" target="_blank"
+      ><img
+        src="/images/logos/nmbu-logo-white.svg"
+        alt="UiO logo"
+        width="100"
+      /></a
+    >
+    <a href="https://www.forskningsradet.no/" target="_blank" class="-ml-8"
+      ><img
+        src="/images/logos/nfr-logo-white.svg"
+        alt="UiO logo"
+        width="340"
+      /></a
+    >
+  </div>
+  <!-- Copyright  -->
+  <p class="mx-auto max-w-[800px] pb-4 text-center text-xs font-light md:px-12">
+    Financed by the Research Council of Norway’s grants 208481, 270068, 295932,
+    the University of Bergen, the University of Oslo, the Arctic University of
+    Norway in Tromsø, the Norwegian University of Science and Technology and the
+    Norwegian University of Life Sciences: NMBU
+  </p>
+</div>
+
+<style lang="postcss">
+  a {
+      @apply hover:text-primary font-medium
+  }
+</style>

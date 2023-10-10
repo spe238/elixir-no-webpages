@@ -1,0 +1,106 @@
+---
+import { Image } from "astro:assets";
+
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "../ui/card";
+
+import sushmaImg from "@/assets/people/sushma.png";
+import eivindImg from "@/assets/people/eivind-hovig.png";
+import erikImg from "@/assets/people/erik-hjerde.png";
+import paalImg from "@/assets/people/paal-saetrom.png";
+import simenImg from "@/assets/people/simen-sandve.png";
+---
+
+<h1 class="mx-auto py-2 text-center text-4xl font-bold uppercase text-primary">
+  Elixir Norway
+</h1>
+
+<Card
+  className="justify-center bg-gradient-to-r from-background via-secondary to-background w-fit"
+>
+  <CardHeader>
+    <CardTitle>Node Leaders</CardTitle>
+  </CardHeader>
+  <CardContent>
+    <div class="flex flex-col items-center gap-x-4 md:flex-row">
+      <!--Names-->
+      <ul class="px-2 py-3">
+        <li class="flex flex-col">
+          <a
+            href="https://www.uib.no/en/persons/Sushma.Grellscheid"
+            target="_blank">Sushma Grellscheid (UiB)</a
+          >
+          <p class="pl-2 font-light italic">Head of Node ELIXIR Norway</p>
+        </li>
+        <li>
+          <a
+            href="https://www.mn.uio.no/ifi/english/people/aca/ehovig/index.html"
+            target="_blank"
+          >
+            Eivind Hovig (UiO)
+          </a>
+        </li>
+        <li>
+          <a href="https://en.uit.no/ansatte/person?p_document_id=41977"
+            >Erik Hjerde (UiT)</a
+          >
+        </li>
+        <li>
+          <a href="https://www.ntnu.edu/employees/pal.satrom" target="_blank">
+            Pål Sætrom (NTNU)
+          </a>
+        </li>
+        <li>
+          <a href="https://www.nmbu.no/emp/simen.sandve" target="_blank">
+            Simen Rød Sandve (NMBU)
+          </a>
+        </li>
+      </ul>
+      <!--Photos-->
+      <div class="flex flex-row gap-x-1">
+        <Image
+          src={sushmaImg}
+          alt="Sushma Grellscheid"
+          title="Sushma Grellscheid"
+          height="100px"
+        />
+        <Image
+          src={eivindImg}
+          alt="Eivind Hovig"
+          title="Eivind Hovig"
+          height="100px"
+        />
+        <Image
+          src={erikImg}
+          alt="Erik Hjerde"
+          title="Erik Hjerde"
+          height="100px"
+        />
+        <Image
+          src={paalImg}
+          alt="Pål Sætrom"
+          title="Pål Sætrom"
+          height="100px"
+        />
+        <Image
+          src={simenImg}
+          alt="Simen Rød Sandve"
+          title="Simen Rød Sandve"
+          height="100px"
+        />
+      </div>
+    </div>
+  </CardContent>
+</Card>
+
+<style lang="postcss">
+    a {
+        @apply hover:text-primary
+    }
+</style>
