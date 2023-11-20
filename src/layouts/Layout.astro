@@ -2,6 +2,7 @@
 import '@/styles/global.css';
 
 import { NavbarWide } from '@/components/navbar/navbar-wide';
+
 import Footer from '@/components/Footer.astro';
 
 interface Props {
@@ -11,23 +12,27 @@ const { title = 'Elixir Norway' } = Astro.props;
 ---
 
 <html lang="en" class="dark">
-	<head>
+	<head class=header>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="mx-auto max-w-[1200px] bg-background">
-		<div class="hidden md:block">
+	<body class="bg-dark-500">
+		<div class="hidden md:block mx-auto max-w-[1200px] header">
 			<NavbarWide client:load />
 		</div>
-		<div class="block md:hidden">
+		<div class="block md:hidden ">
 			<!-- TODO: burger menu for mobile screens -->
 		</div>
-		<div class="h-full p-10">
-			<slot />
+		<div class="h-full mx-auto max-w content-bg">
+			<div class="mx-auto">
+				<slot />
+			</div>
 		</div>
-		<Footer />
+		<div>
+			<Footer />
+		</div>
 	</body>
 </html>

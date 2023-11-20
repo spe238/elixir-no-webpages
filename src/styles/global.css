@@ -5,7 +5,7 @@
 
 @layer base {
 	:root {
-		--background: 0 0% 100%;
+		--background: 60 9.1% 97.8%;;
 		--foreground: 20 14.3% 4.1%;
 		--card: 0 0% 100%;
 		--card-foreground: 20 14.3% 4.1%;
@@ -59,3 +59,60 @@
 		@apply bg-background text-foreground;
 	}
 }
+
+.content-bg {
+	background-color: #f7fafc;
+  }
+
+.search-bar {
+	display: flex;
+	align-items: center;
+}
+
+.search-input {
+	border: 1px solid #ccc;
+	padding: 5px;
+	margin-right: 0px;
+	color: black; 
+}
+
+.search-button {
+	background-color: orange; 
+	border: none;
+	cursor: pointer;
+}
+
+.search-icon {
+	background-color: orange;
+	padding: 1px; 
+	border-radius: 10%; 
+	border: 1px solid orange; 
+}
+
+.footer {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	padding: 2rem 1rem;
+}
+
+.image-container {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-top: 10px; /* Ajuste a margem conforme necessário para posicionar a imagem verticalmente */
+	margin-left: 10px; /* Ajuste a margem conforme necessário para posicionar a imagem horizontalmente */
+	z-index: 1; /* Certifique-se de que a imagem esteja acima dos outros elementos da página */
+  }
+  
+  .logo {
+	width: 80px;
+	height: auto; /* Para manter a proporção da imagem */
+  }
+
+  .member-images {
+	background-color: lightgray;
+  }
+  
