@@ -6,6 +6,11 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
+  vite: {
+    ssr: {
+      noExternal: ["react-icons"],
+    },
+  },
   integrations: [react(), tailwind({
     applyBaseStyles: false
   }), mdx()]
