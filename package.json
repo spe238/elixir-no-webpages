@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "C:/Users/dma044/Documents/elixir-no-webpages/node_modules/.bin/astro dev",
+    "dev": "../elixir-no-astro3/node_modules/.bin/astro dev",
     "start": "../elixir-no-astro3/node_modules/.bin/astro dev",
     "build": "../elixir-no-astro3/node_modules/.bin/astro build",
     "preview": "../elixir-no-astro3/node_modules/.bin/astro preview",
