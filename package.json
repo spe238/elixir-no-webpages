@@ -3,11 +3,11 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "../elixir-no-astro3/node_modules/.bin/astro dev",
-    "start": "../elixir-no-astro3/node_modules/.bin/astro dev",
-    "build": "../elixir-no-astro3/node_modules/.bin/astro build",
-    "preview": "../elixir-no-astro3/node_modules/.bin/astro preview",
-    "astro": "../elixir-no-astro3/node_modules/.bin/astro"
+    "dev": "../node_modules/.bin/astro dev",
+    "start": "../node_modules/.bin/astro dev",
+    "build": "../node_modules/.bin/astro build",
+    "preview": "../node_modules/.bin/astro preview",
+    "astro": "../node_modules/.bin/astro"
   },
   "dependencies": {
     "@astrojs/mdx": "^1.1.0",
