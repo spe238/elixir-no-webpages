@@ -1,5 +1,5 @@
 ---
-import: Search from './navbar/Search';
+import Search from './navbar/Search';
 const allPosts = await Astro.glob('../pages/*.{md,mdx}');
 const posts = allPosts.filter(post => (!post.frontmatter.draft && post.frontmatter.slug));
 ---
