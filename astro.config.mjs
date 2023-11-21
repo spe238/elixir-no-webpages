@@ -8,7 +8,7 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   output: 'static',
   buildOptions: {
-    baseUrl: '/elixir-no-webpages/', // ajuste conforme necessário
+    baseUrl: '/elixir-no-webpages/',
   },
   includes: ['src/**/*.astro', 'src/**/*.mdx'],
   styles: {
