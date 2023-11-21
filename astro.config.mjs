@@ -6,6 +6,10 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
+  includes: ['src/**/*.astro', 'src/**/*.mdx'],
+  styles: {
+    include: 'src/styles/**/*.css',
+  },
   vite: {
     ssr: {
       noExternal: ["react-icons"],
