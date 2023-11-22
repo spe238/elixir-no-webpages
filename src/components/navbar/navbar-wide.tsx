@@ -74,7 +74,7 @@ export function NavbarWide() {
 				<NavigationMenuList>
 					<NavigationMenuItem>
 						<NavigationMenuTrigger>
-							<a href="/organisation">Organisation</a>
+							<a href="./organisation">Organisation</a>
 						</NavigationMenuTrigger>
 						<NavigationMenuContent>
 							<ul className="flex max-w-fit flex-col gap-3 p-3">
