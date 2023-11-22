@@ -63,7 +63,7 @@ const navLinkClasses: string =
 export function NavbarWide() {
 	return (
 		<div className="mx-auto grid max-w-[1200px] grid-cols-[1fr_auto_2fr] place-content-center px-6 py-2">
-			<a href="/">
+			<a href="./">
 				<img
 					src="/elixir-no-webpages/images/logos/elixir-no-logo-white.svg"
 					alt="Elixir Norway Logo"
