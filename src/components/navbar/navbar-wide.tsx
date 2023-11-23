@@ -62,7 +62,7 @@ const navLinkClasses: string =
 	'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground';
 export function NavbarWide() {
 	return (
-		<div className="grid grid-cols-[2.5fr_auto_2fr] place-content-center px-6 py-2">
+		<div className="grid grid-cols-[2.6fr_auto_2fr] place-content-center px-6 py-2">
 			<div className="mx-auto-head flex.items-center">
 				<a href="/">
 					<img
