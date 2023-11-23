@@ -18,23 +18,23 @@ type NavItems = {
 const projects: NavItems[] = [
 	{
 		title: 'BioMedData',
-		href: '/elixir-no-webpages/projects/bio-med-data',
+		href: './projects/bio-med-data',
 		description:
 			'Research infrastructure to promote FAIR data management within life sciences',
 	},
 	{
 		title: 'EU Projects',
-		href: '/elixir-no-webpages/projects/eu-projects',
+		href: './projects/eu-projects',
 		description: 'Elixir-converge, B1MG and EOSC-Life',
 	},
 	{
 		title: 'NeIC',
-		href: '/elixir-no-webpages/projects/neic',
+		href: './projects/neic',
 		description: 'Nordic collaboration on sensitive data',
 	},
 	{
 		title: 'GBC',
-		href: '/elixir-no-webpages/projects/gbc',
+		href: './projects/gbc',
 		description: 'Global Biodata Coalition',
 	},
 ];
@@ -42,18 +42,18 @@ const projects: NavItems[] = [
 const services: NavItems[] = [
 	{
 		title: 'Helpdesk',
-		href: '/elixir-no-webpages/services/helpdesk',
+		href: './services/helpdesk',
 		description: 'Support for bioinformatics and data management',
 	},
 	{
 		title: 'Tools',
-		href: '/elixir-no-webpages/services/tools',
+		href: './services/tools',
 		description:
 			'Infrastructure and software for workflows, databases and storage for life science data',
 	},
 	{
 		title: 'Training',
-		href: '/elixir-no-webpages/services/training',
+		href: './services/training',
 		description:
 			'Courses and workshops in informatics and data management for life sciences',
 	},
@@ -62,14 +62,16 @@ const navLinkClasses: string =
 	'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground';
 export function NavbarWide() {
 	return (
-		<div className="mx-auto grid max-w-[1200px] grid-cols-[1fr_auto_2fr] place-content-center px-6 py-2">
-			<a href="/">
-				<img
-					src="./images/logos/elixir-no-logo-white.svg"
-					alt="Elixir Norway Logo"
-					width="80px"
-				/>
-			</a>
+		<div className="grid grid-cols-[2.5fr_auto_2fr] place-content-center px-6 py-2">
+			<div className="mx-auto-head flex.items-center">
+				<a href="/">
+					<img
+						src="./images/logos/elixir-no-logo-white.svg"
+						alt="Elixir Norway Logo"
+						width="80px"
+					/>
+				</a>
+			</div>
 			<NavigationMenu>
 				<NavigationMenuList>
 					<NavigationMenuItem>
