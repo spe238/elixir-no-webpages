@@ -62,81 +62,90 @@ const navLinkClasses: string =
 	'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground';
 export function NavbarWide() {
 	return (
-		<div className="mx-auto grid max-w-[1200px] grid-cols-[1fr_auto_2fr] place-content-center px-6 py-2">
-			<a href="/">
-				<img
-					src="/images/logos/elixir-no-logo-white.svg"
-					alt="Elixir Norway Logo"
-					width="80px"
-				/>
-			</a>
-			<NavigationMenu>
-				<NavigationMenuList>
-					<NavigationMenuItem>
-						<NavigationMenuTrigger>
-							<a href="/organisation">Organisation</a>
-						</NavigationMenuTrigger>
-						<NavigationMenuContent>
-							<ul className="flex max-w-fit flex-col gap-3 p-3">
-								<NavigationMenuLink
-									href="/organisation/bergen"
-									className={navLinkClasses}>
-									Bergen
-								</NavigationMenuLink>
-								<NavigationMenuLink
-									href="/organisation/oslo"
-									className={navLinkClasses}>
-									Oslo
-								</NavigationMenuLink>
-								<NavigationMenuLink
-									href="/organisation/tromsoe"
-									className={navLinkClasses}>
-									Tromsø
-								</NavigationMenuLink>
-								<NavigationMenuLink
-									href="/organisation/trondheim"
-									className={navLinkClasses}>
-									Trondheim
-								</NavigationMenuLink>
-								<NavigationMenuLink
-									href="/organisation/aas"
-									className={navLinkClasses}>
-									Ås
-								</NavigationMenuLink>
+		<div className="grid mx-auto grid-cols-[2.5fr_auto_2fr] place-content-center px-6 py-2">
+			<div className="mx-auto-head flex items-center">
+				<a href="/">
+					<img
+						src="/images/logos/elixir-no-logo-white.svg"
+						alt="Elixir Norway Logo"
+						width="80px"
+					/>
+				</a>
+			</div>
+			<div> 
+				<NavigationMenu>
+					<NavigationMenuList>
+						<NavigationMenuItem>
+							<NavigationMenuTrigger>
+								<a href="/organisation">Organisation</a>
+							</NavigationMenuTrigger>
+							<NavigationMenuContent>
+								<ul className="flex max-w-fit flex-col gap-3 p-3">
+									<NavigationMenuLink
+										href="/organisation/bergen"
+										className={navLinkClasses}>
+										Bergen
+									</NavigationMenuLink>
+									<NavigationMenuLink
+										href="/organisation/oslo"
+										className={navLinkClasses}>
+										Oslo
+									</NavigationMenuLink>
+									<NavigationMenuLink
+										href="/organisation/tromsoe"
+										className={navLinkClasses}>
+										Tromsø
+									</NavigationMenuLink>
+									<NavigationMenuLink
+										href="/organisation/trondheim"
+										className={navLinkClasses}>
+										Trondheim
+									</NavigationMenuLink>
+									<NavigationMenuLink
+										href="/organisation/aas"
+										className={navLinkClasses}>
+										Ås
+									</NavigationMenuLink>
+								</ul>
+							</NavigationMenuContent>
+						</NavigationMenuItem>
+						<NavigationMenuItem>
+							<NavigationMenuTrigger>Projects</NavigationMenuTrigger>
+							<NavigationMenuContent>
+								<ul className="lg:grid-col-[.75fr_1fr] grid gap-3 p-6 md:w-[400px] lg:w-[500px]">
+									{projects.map(it => (
+										<ListItem href={it.href} title={it.title} key={it.title}>
+											{it.description}
+										</ListItem>
+									))}
+								</ul>
+							</NavigationMenuContent>
+						</NavigationMenuItem>
+						<NavigationMenuItem>
+							<NavigationMenuTrigger>Services</NavigationMenuTrigger>
+							<NavigationMenuContent>
+								<ul className="lg:grid-col-[.75fr_1fr] grid gap-3 p-6 md:w-[400px] lg:w-[500px]">
+									{services.map(it => (
+										<ListItem href={it.href} title={it.title} key={it.title}>
+											{it.description}
+										</ListItem>
+									))}
+								</ul>
+							</NavigationMenuContent>
+						</NavigationMenuItem>
+						<NavigationMenuItem>
+							<ul className="flex max-w-fit flex-col gap-3 p-3 p-6">
+								<NavigationMenuLink href="/news">News</NavigationMenuLink>
 							</ul>
-						</NavigationMenuContent>
-					</NavigationMenuItem>
-					<NavigationMenuItem>
-						<NavigationMenuTrigger>Projects</NavigationMenuTrigger>
-						<NavigationMenuContent>
-							<ul className="lg:grid-col-[.75fr_1fr] grid gap-3 p-6 md:w-[400px] lg:w-[500px]">
-								{projects.map(it => (
-									<ListItem href={it.href} title={it.title} key={it.title}>
-										{it.description}
-									</ListItem>
-								))}
+						</NavigationMenuItem>					
+						<NavigationMenuItem>
+							<ul className="flex max-w-fit flex-col gap-3 p-3 p-6 md:w-[200px] lg:w-[250px]">
+								<NavigationMenuLink href="/events">Events</NavigationMenuLink>
 							</ul>
-						</NavigationMenuContent>
-					</NavigationMenuItem>
-					<NavigationMenuItem>
-						<NavigationMenuTrigger>Services</NavigationMenuTrigger>
-						<NavigationMenuContent>
-							<ul className="lg:grid-col-[.75fr_1fr] grid gap-3 p-6 md:w-[400px] lg:w-[500px]">
-								{services.map(it => (
-									<ListItem href={it.href} title={it.title} key={it.title}>
-										{it.description}
-									</ListItem>
-								))}
-							</ul>
-						</NavigationMenuContent>
-					</NavigationMenuItem>
-					<NavigationMenuItem>
-						<ul className="flex max-w-fit flex-col gap-3 p-3 p-6 md:w-[200px] lg:w-[250px]">
-							<NavigationMenuLink href="/news">News</NavigationMenuLink>
-						</ul>
-					</NavigationMenuItem>
-				</NavigationMenuList>
-			</NavigationMenu>
+						</NavigationMenuItem>
+					</NavigationMenuList>
+				</NavigationMenu>
+			</div>
 		</div>
 	);
 }

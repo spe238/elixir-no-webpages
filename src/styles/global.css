@@ -116,3 +116,10 @@
 	background-color: lightgray;
   }
   
+  .mx-auto-head {
+    margin-left: 0;
+  }
+
+  .flex.items-center {
+	margin-right: auto;
+  }
