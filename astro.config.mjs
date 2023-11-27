@@ -6,8 +6,7 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://elixir-no.github.io/',
-  base: '/elixir-no-webpages/',
+  site: 'https://elixir-no.github.io/elixir-no-webpages/',
   vite: {
     ssr: {
       noExternal: ["react-icons"],
