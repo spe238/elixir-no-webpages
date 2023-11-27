@@ -76,7 +76,7 @@ export function NavbarWide() {
 				<NavigationMenuList>
 					<NavigationMenuItem>
 						<NavigationMenuTrigger>
-							<a href='/organisation'>Organisation</a>
+							<a href='organisation'>Organisation</a>
 						</NavigationMenuTrigger>
 						<NavigationMenuContent>
 							<ul className="flex max-w-fit flex-col gap-3 p-3">
@@ -86,7 +86,7 @@ export function NavbarWide() {
 									Bergen
 								</NavigationMenuLink>
 								<NavigationMenuLink
-									href="/organisation/oslo"
+									href="organisation/oslo"
 									className={navLinkClasses}>
 									Oslo
 								</NavigationMenuLink>
