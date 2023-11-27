@@ -18,23 +18,23 @@ type NavItems = {
 const projects: NavItems[] = [
 	{
 		title: 'BioMedData',
-		href: './projects/bio-med-data',
+		href: '/projects/bio-med-data',
 		description:
 			'Research infrastructure to promote FAIR data management within life sciences',
 	},
 	{
 		title: 'EU Projects',
-		href: './projects/eu-projects',
+		href: '/projects/eu-projects',
 		description: 'Elixir-converge, B1MG and EOSC-Life',
 	},
 	{
 		title: 'NeIC',
-		href: './projects/neic',
+		href: '/projects/neic',
 		description: 'Nordic collaboration on sensitive data',
 	},
 	{
 		title: 'GBC',
-		href: './projects/gbc',
+		href: '/projects/gbc',
 		description: 'Global Biodata Coalition',
 	},
 ];
@@ -42,18 +42,18 @@ const projects: NavItems[] = [
 const services: NavItems[] = [
 	{
 		title: 'Helpdesk',
-		href: './services/helpdesk',
+		href: '/services/helpdesk',
 		description: 'Support for bioinformatics and data management',
 	},
 	{
 		title: 'Tools',
-		href: './services/tools',
+		href: '/services/tools',
 		description:
 			'Infrastructure and software for workflows, databases and storage for life science data',
 	},
 	{
 		title: 'Training',
-		href: './services/training',
+		href: '/services/training',
 		description:
 			'Courses and workshops in informatics and data management for life sciences',
 	},
@@ -66,7 +66,7 @@ export function NavbarWide() {
 			<div className="mx-auto-head flex.items-center">
 				<a href="/">
 					<img
-						src="./images/logos/elixir-no-logo-white.svg"
+						src="/images/logos/elixir-no-logo-white.svg"
 						alt="Elixir Norway Logo"
 						width="80px"
 					/>
@@ -76,32 +76,32 @@ export function NavbarWide() {
 				<NavigationMenuList>
 					<NavigationMenuItem>
 						<NavigationMenuTrigger>
-							<a href="./organisation">Organisation</a>
+							<a href="/organisation">Organisation</a>
 						</NavigationMenuTrigger>
 						<NavigationMenuContent>
 							<ul className="flex max-w-fit flex-col gap-3 p-3">
 								<NavigationMenuLink
-									href="./organisation/bergen"
+									href="/organisation/bergen"
 									className={navLinkClasses}>
 									Bergen
 								</NavigationMenuLink>
 								<NavigationMenuLink
-									href="./organisation/oslo"
+									href="/organisation/oslo"
 									className={navLinkClasses}>
 									Oslo
 								</NavigationMenuLink>
 								<NavigationMenuLink
-									href="./organisation/tromsoe"
+									href="/organisation/tromsoe"
 									className={navLinkClasses}>
 									Tromsø
 								</NavigationMenuLink>
 								<NavigationMenuLink
-									href="./organisation/trondheim"
+									href="/organisation/trondheim"
 									className={navLinkClasses}>
 									Trondheim
 								</NavigationMenuLink>
 								<NavigationMenuLink
-									href="./organisation/aas"
+									href="/organisation/aas"
 									className={navLinkClasses}>
 									Ås
 								</NavigationMenuLink>
