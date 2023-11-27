@@ -18,23 +18,23 @@ type NavItems = {
 const projects: NavItems[] = [
 	{
 		title: 'BioMedData',
-		href: '/projects/bio-med-data',
+		href: 'projects/bio-med-data',
 		description:
 			'Research infrastructure to promote FAIR data management within life sciences',
 	},
 	{
 		title: 'EU Projects',
-		href: '/projects/eu-projects',
+		href: 'projects/eu-projects',
 		description: 'Elixir-converge, B1MG and EOSC-Life',
 	},
 	{
 		title: 'NeIC',
-		href: '/projects/neic',
+		href: 'projects/neic',
 		description: 'Nordic collaboration on sensitive data',
 	},
 	{
 		title: 'GBC',
-		href: '/projects/gbc',
+		href: 'projects/gbc',
 		description: 'Global Biodata Coalition',
 	},
 ];
@@ -42,18 +42,18 @@ const projects: NavItems[] = [
 const services: NavItems[] = [
 	{
 		title: 'Helpdesk',
-		href: '/services/helpdesk',
+		href: 'services/helpdesk',
 		description: 'Support for bioinformatics and data management',
 	},
 	{
 		title: 'Tools',
-		href: '/services/tools',
+		href: 'services/tools',
 		description:
 			'Infrastructure and software for workflows, databases and storage for life science data',
 	},
 	{
 		title: 'Training',
-		href: '/services/training',
+		href: 'services/training',
 		description:
 			'Courses and workshops in informatics and data management for life sciences',
 	},
@@ -64,9 +64,9 @@ export function NavbarWide() {
 	return (
 		<div className="grid grid-cols-[2.5fr_auto_2fr] place-content-center px-6 py-2">
 			<div className="mx-auto-head flex.items-center">
-				<a href="/">
+				<a href="">
 					<img
-						src="./images/logos/elixir-no-logo-white.svg"
+						src="images/logos/elixir-no-logo-white.svg"
 						alt="Elixir Norway Logo"
 						width="80px"
 					/>
@@ -81,7 +81,7 @@ export function NavbarWide() {
 						<NavigationMenuContent>
 							<ul className="flex max-w-fit flex-col gap-3 p-3">
 								<NavigationMenuLink
-									href="./organisation/bergen"
+									href="organisation/bergen"
 									className={navLinkClasses}>
 									Bergen
 								</NavigationMenuLink>
@@ -91,17 +91,17 @@ export function NavbarWide() {
 									Oslo
 								</NavigationMenuLink>
 								<NavigationMenuLink
-									href="./organisation/tromsoe"
+									href="organisation/tromsoe"
 									className={navLinkClasses}>
 									Tromsø
 								</NavigationMenuLink>
 								<NavigationMenuLink
-									href="/organisation/trondheim"
+									href="organisation/trondheim"
 									className={navLinkClasses}>
 									Trondheim
 								</NavigationMenuLink>
 								<NavigationMenuLink
-									href="/organisation/aas"
+									href="organisation/aas"
 									className={navLinkClasses}>
 									Ås
 								</NavigationMenuLink>
@@ -134,12 +134,12 @@ export function NavbarWide() {
 					</NavigationMenuItem>
 					<NavigationMenuItem>
 						<ul className="flex max-w-fit flex-col gap-3 p-3 p-6">
-							<NavigationMenuLink href="/news">News</NavigationMenuLink>
+							<NavigationMenuLink href="news">News</NavigationMenuLink>
 						</ul>
 					</NavigationMenuItem>
 					<NavigationMenuItem>
 							<ul className="flex max-w-fit flex-col gap-3 p-3 p-6 md:w-[200px] lg:w-[250px]">
-								<NavigationMenuLink href="/events">Events</NavigationMenuLink>
+								<NavigationMenuLink href="events">Events</NavigationMenuLink>
 							</ul>
 						</NavigationMenuItem>
 				</NavigationMenuList>
