@@ -64,7 +64,7 @@ export function NavbarWide() {
 	return (
 		<div className="grid grid-cols-[2.5fr_auto_2fr] place-content-center px-6 py-2">
 			<div className="mx-auto-head flex.items-center">
-				<a href="./">
+				<a href="~/">
 					<img
 						src="./images/logos/elixir-no-logo-white.svg"
 						alt="Elixir Norway Logo"
