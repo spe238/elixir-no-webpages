@@ -5,9 +5,9 @@
     "allowJs": true,
     "jsx": "react-jsx",
     "jsxImportSource": "react",
-    "baseUrl": "/elixir-no-webpages/",
+    "baseUrl": ".",
     "paths": {
-      "@/*": [
+      "@/elixir-no-webpages/*": [
         "src/*"
       ]
     }
