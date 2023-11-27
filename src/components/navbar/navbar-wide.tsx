@@ -64,9 +64,9 @@ export function NavbarWide() {
 	return (
 		<div className="grid grid-cols-[2.5fr_auto_2fr] place-content-center px-6 py-2">
 			<div className="mx-auto-head flex.items-center">
-				<a href="${astro.config.base}">
+				<a href="./">
 					<img
-						src="${astro.config.base}/images/logos/elixir-no-logo-white.svg"
+						src="./images/logos/elixir-no-logo-white.svg"
 						alt="Elixir Norway Logo"
 						width="80px"
 					/>
@@ -76,12 +76,12 @@ export function NavbarWide() {
 				<NavigationMenuList>
 					<NavigationMenuItem>
 						<NavigationMenuTrigger>
-							<a href="/organisation">Organisation</a>
+							<a href="./organisation">Organisation</a>
 						</NavigationMenuTrigger>
 						<NavigationMenuContent>
 							<ul className="flex max-w-fit flex-col gap-3 p-3">
 								<NavigationMenuLink
-									href="/organisation/bergen"
+									href="./organisation/bergen"
 									className={navLinkClasses}>
 									Bergen
 								</NavigationMenuLink>
@@ -91,7 +91,7 @@ export function NavbarWide() {
 									Oslo
 								</NavigationMenuLink>
 								<NavigationMenuLink
-									href="/organisation/tromsoe"
+									href="./organisation/tromsoe"
 									className={navLinkClasses}>
 									Tromsø
 								</NavigationMenuLink>
