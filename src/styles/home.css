@@ -48,6 +48,7 @@
   .text-content {
 	margin-top: 10px;
 	color: #2D2E33;
+	
   }
   
   .box:hover {
@@ -75,7 +76,7 @@
 	justify-content: space-between;
 	text-align: center;
 	margin: 10px;
-	font-size: 18px;
+	font-size: 16px;
   }
 
   .box-help:link, .box-help:visited, .box-help:active {
@@ -119,7 +120,7 @@
 	text-align: justify;
 	align-items: center;
 	display: flex;
-    height: 120px; /* Ajuste a altura conforme necessário */
+    height: 120px;
   }
 
   .news-container {
@@ -127,18 +128,18 @@
 	margin-right: 20px;
 	padding: 20px;
 	background-color: #f7f7f7;
-	color: black; /* Adicione esta linha para definir a cor do texto para preto */
+	color: black;
   }
   
   .about-container {
 	flex: 1;
 	padding: 20px;
 	background-color: #f7f7f7;
-	color: black; /* Adicione esta linha para definir a cor do texto para preto */
+	color: black;
   }
 
   .about-container p {
-	margin-bottom: 10px; /* Adicione esta linha para definir o espaçamento entre os parágrafos */
+	margin-bottom: 10px;
   }
   
   .section-title {
@@ -165,11 +166,11 @@
   }
 
   .about-container ul li {
-	list-style-type: disc; /* Esta linha define as bolinhas como marcadores da lista */
+	list-style-type: disc;
   }
 
   .about-container ul li::marker {
-	color: orange; /* Substitua "#ff0000" pela cor que você deseja para os marcadores */
+	color: orange;
   }
 
   .more-link {
@@ -184,18 +185,18 @@
   }
   
   .node-info h2 {
-    font-size: 36px; /* ou qualquer tamanho desejado */
+    font-size: 36px; 
 	margin-bottom: 20px;
 }
 
 .member-images {
     display: flex;
-    gap: 10px; /* Define o espaçamento entre as imagens */
+    gap: 10px; 
 }
 
 .member-images img {
-    width: 133px; /* Define a largura desejada para as imagens */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 152px; 
+    height: auto; 
 }
 
 .Organization-tromsoe {

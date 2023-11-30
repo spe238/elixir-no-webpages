@@ -64,6 +64,10 @@
 	background-color: #f7fafc;
   }
 
+  .content-bg2 {
+	background-color: #000000;
+  }
+
 .search-bar {
 	display: flex;
 	align-items: center;
@@ -102,20 +106,16 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	margin-top: 10px; /* Ajuste a margem conforme necessário para posicionar a imagem verticalmente */
-	margin-left: 10px; /* Ajuste a margem conforme necessário para posicionar a imagem horizontalmente */
-	z-index: 1; /* Certifique-se de que a imagem esteja acima dos outros elementos da página */
+	margin-top: 10px; 
+	margin-left: 10px; 
+	z-index: 1; 
   }
   
   .logo {
 	width: 80px;
-	height: auto; /* Para manter a proporção da imagem */
+	height: auto;
   }
 
-  .member-images {
-	background-color: lightgray;
-  }
-  
   .mx-auto-head {
     margin-left: 0;
   }
