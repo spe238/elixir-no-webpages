@@ -39,6 +39,18 @@
 	margin-top: 30px;
   }
   
+  .icon-page {
+	width: 80px;
+	height: 80px;
+	background-color: orange;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.3s ease;
+	margin-bottom: 10px;
+	margin-top: 30px;
+  }
+
   .text-title {
 	margin-top: 10px;
 	font-weight: bold;
