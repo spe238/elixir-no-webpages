@@ -9,8 +9,8 @@
   }
   
   .box {
-	background-color: #fff;
-	border: 0px solid white;
+	background-color: #ffffff;
+	border: 0px solid #fff;
 	width: 20%;
 	height: 400px;
 	text-align: center; 
@@ -18,18 +18,18 @@
 	flex-direction: column;
 	align-items: center; 
 	transition: background-color 0.3s ease;
-	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+	
 	margin: 0 10px;
   }
   
   .box:hover {
-	background-color: orange;
+	background-color: #f47c21e1;
   }
   
   .icon {
 	width: 80px;
 	height: 80px;
-	background-color: orange;
+	background-color: #f47c21e1;
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
@@ -38,11 +38,11 @@
 	margin-bottom: 10px;
 	margin-top: 30px;
   }
-  
+
   .icon-page {
 	width: 80px;
 	height: 80px;
-	background-color: orange;
+	background-color: #f47c21e1;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -50,21 +50,22 @@
 	margin-bottom: 10px;
 	margin-top: 30px;
   }
-
+  
   .text-title {
 	margin-top: 10px;
 	font-weight: bold;
 	color: #2D2E33;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
   }
 
   .text-content {
 	margin-top: 10px;
 	color: #2D2E33;
-	
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
   }
   
   .box:hover {
-	background-color: orange;
+	background-color: #f47c21e1;
   }
   
   .box:hover .icon {
@@ -80,7 +81,7 @@
   }
 
   .box:hover .icon svg {
-	fill: orange;
+	fill: #f47c21e1;
   }
   
   .box p {
@@ -94,6 +95,7 @@
   .box-help:link, .box-help:visited, .box-help:active {
     color: #047eaa;
     text-decoration: none;
+	font-weight: bold;
 }
 
 .box:hover .box-help:link {
@@ -124,15 +126,17 @@
 	margin-top: 10px;
 	font-weight: bold;
 	color: #ffffff;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
   }
 
   .text-content2 {
 	margin-top: 10px;
 	color: #ffffff;
-	text-align: justify;
+	text-align: center;
 	align-items: center;
 	display: flex;
     height: 120px;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
   }
 
   .news-container {
@@ -155,7 +159,7 @@
   }
   
   .section-title {
-	font-size: 24px;
+	font-size: 48px;
 	font-weight: bold;
 	margin-bottom: 10px;
 	color: #023452;
@@ -182,7 +186,7 @@
   }
 
   .about-container ul li::marker {
-	color: orange;
+	color: #f47c21e1;
   }
 
   .more-link {
@@ -211,6 +215,4 @@
     height: auto; 
 }
 
-.Organization-tromsoe {
-    background-color: #f7f7f7;
-}
+
