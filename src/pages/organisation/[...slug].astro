@@ -1,0 +1,25 @@
+---
+// Layout Import
+import Layout from '../../layouts/Layout.astro';
+import MapLayout from '../../layouts/MapLayout.astro';
+import Menu from '../../layouts/MenuOrganisation.astro';
+import Pill from '../../components/Pill.astro';
+import '@/styles/home.css';
+
+import { type CollectionEntry, getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+    const organisationEntries = await getCollection('organisation');
+    return organisationEntries.map(entry => ({
+        params: { slug: entry.slug }, props: { entry },
+  }));
+}
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+<Layout>
+	<div class="Organization-tromsoe mx-auto max-w-[800px] py-4 text-content node-info">
+	<Content/>
+  <MapLayout address={entry.data.address} map={entry.data.map}>
+</Layout>
+

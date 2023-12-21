@@ -6,6 +6,7 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
+  assetsInclude: ['**/*.md'],
   base: '/elixir-no-webpages/',
   vite: {
     ssr: {

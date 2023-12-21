@@ -6,19 +6,23 @@ import { NavbarWide } from '@/components/navbar/navbar-wide';
 
 import { FaQuestion, FaTools, FaServer, FaGraduationCap, FaGlobe, FaSitemap, FaFlask, FaNewspaper } from 'react-icons/fa';
 
+import type { CollectionEntry } from 'astro:content';
+
 interface Props {
 title?: string;
+project: CollectionEntry<'content'>;
 }
 const { title = 'Elixir Norway' } = Astro.props;
+const { slug } = Astro.props;
 ---
 
 <div class="flex text-center mx-auto">
   <div class="flex-with-background ">
     <h1 class="text-4xl font-bold mb-4 text-title2 max-w-[600px] mx-auto">{title}</h1>
-    <p class="text-lg mx-auto text-content2 max-w-[800px] text-content">
+    <p class="text-lg mx-auto text-content2 max-w-[800px]">
       ELIXIR Norway is a national node of ELIXIR, the pan-European infrastructure for biological information, supporting life science research and its translation to medicine, environment, the bioindustries, and society.
     </p>
-    <p class="text-lg mx-auto text-content2 max-w-[800px] text-content">
+    <p class="text-lg mx-auto text-content2 max-w-[800px]">
       ELIXIR Norway is funded by the Research Council of Norway and builds upon the Norwegian Bioinformatics Platform, which has provided support and tools for Norwegian life science research for nearly two decades.
     </p>
   </div>
