@@ -45,7 +45,7 @@ jobs:
 
       - name: Install dependencies and check
         run: |
-          pnpm install --no-frozen-lockfile
+          pnpm install
           pnpm build
 
       - name: Prettify code
