@@ -17,10 +17,11 @@ const blogs = (await getCollection('news', ({ data }) => {
         {blogs.map((blog) =>
             <li>
             <article class="pages-link pages-content py-5">          
-                <a href={'/news/2023/sweden_adds'}><img src={blog.data.img} alt="" /></a>
+                <a href={blog.slug}><img src={blog.data.img} alt="" /></a>
                 <p class="py-3">{blog.data.date}</p>
-                <a href={'./elixir-no-webpages/news/' + blog.slug}>{blog.data.title}</a>
+                <a href={'/elixir-no-webpages/news/' + blog.slug}>{blog.data.title}</a>
                 <p class="py-3">{blog.data.description}</p>
+                <p class="py-3">{blog.slug}</p>
                 [<a href={'../news/' + blog.slug} class="">Read more</a>]
             </article>            
             </li>
