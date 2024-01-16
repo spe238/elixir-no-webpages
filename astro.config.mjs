@@ -7,8 +7,8 @@ import mdx from "@astrojs/mdx";
 // https://astro.build/config
 export default defineConfig({
   routes: {
-    '/news/:slug': '/news/[...news].astro',
-    '/organisation/:slug': '/organisa/[...organisation].astro',
+    '/elixir-no-webpages/news/:slug': '/elixir-no-webpages/news/[...news].astro',
+    '/elixir-no-webpages/organisation/:slug': '/organisa/[...organisation].astro',
   },
   assetsInclude: ['**/*.md'],
   base: '/elixir-no-webpages/',
