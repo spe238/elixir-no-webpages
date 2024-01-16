@@ -8,7 +8,7 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   routes: {
     '/news/:slug': '/news/[...news].astro',
-    '/organisation/:slug': '/organisation/[...organisation].astro',
+    '/organisation/:slug': '/organisa/[...organisation].astro',
   },
   assetsInclude: ['**/*.md'],
   base: '/elixir-no-webpages/',
