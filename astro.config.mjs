@@ -6,6 +6,10 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
+  routes: {
+    '/news/:slug': '/news/[...news].astro',
+    '/organisation/:slug': '/organisation/[...organisation].astro',
+  },
   assetsInclude: ['**/*.md'],
   base: '/elixir-no-webpages/',
   vite: {
