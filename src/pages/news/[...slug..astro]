@@ -6,8 +6,8 @@ import '@/styles/home.css';
 import { type CollectionEntry, getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
-    const organisationEntries = await getCollection('news');
-    return organisationEntries.map(entry => ({
+    const newsEntries = await getCollection('news');
+    return newsEntries.map(entry => ({
         params: { slug: entry.slug }, props: { entry },
   }));
 }
